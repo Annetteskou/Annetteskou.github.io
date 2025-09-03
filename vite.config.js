@@ -8,8 +8,9 @@ export default defineConfig(({ command }) => {
     base: "/",
   };
 
+  // Change base path when building for production
   if (command !== "serve") {
-    config.base = "/Annetteskou.github.io/"; // 👈 Replace with your repository name
+    config.base = "/Annetteskou.github.io/"; // 👈 Replace with your GitHub repository name
   }
 
   return config;

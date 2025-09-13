@@ -37,13 +37,13 @@ export default function ProjectDetail() {
     return (
       <section>
         <p>Projektet blev ikke fundet.</p>
-        <Link to="/projects">Tilbage til Projects</Link>
+        <Link to="/project">Tilbage til Projects</Link>
       </section>
     );
 
   return (
     <section style={{ display: "grid", gap: 16 }}>
-      <Link to="/projects">← Tilbage</Link>
+      <Link to="/project">← Tilbage</Link>
       <h1 style={{ marginBottom: 0 }}>{project.title}</h1>
       <p style={{ color: "#6b7280", marginTop: 0 }}>{project.year}</p>
       {project.image && (

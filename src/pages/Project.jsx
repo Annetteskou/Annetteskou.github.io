@@ -88,7 +88,7 @@ export default function Project() {
                 ))}
               </div>
 
-              <NavLink to={`/projects/${project.id}`}>Se detaljer</NavLink>
+              <NavLink to={`/project/${project.id}`}>Se detaljer</NavLink>
             </div>
           </article>
         ))}

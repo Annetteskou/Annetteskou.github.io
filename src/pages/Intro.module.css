@@ -1,0 +1,36 @@
+.intro {
+  position: fixed;
+  inset: 0;
+  background: url("/public/v.gif") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 1s ease 2.5s forwards;
+}
+
+.center {
+  text-align: center;
+  animation: zoomIn 0.8s ease;
+}
+
+.title {
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(90deg, #ff73b3, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: white;  /* hvid fyld */
+  -webkit-text-stroke: 1px black;  /* sort kant */
+}
+
+
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}

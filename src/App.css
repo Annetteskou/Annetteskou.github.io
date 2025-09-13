@@ -1,10 +1,8 @@
 :root {
-  --color-bg: #0b0c10;
   --color-text: #eaeaea;
   --color-accent: #426ea7;
 }
 body {
-  background: var(--color-bg);
   color: var(--color-text);
 }
 a:hover {

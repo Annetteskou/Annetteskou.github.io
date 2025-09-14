@@ -9,13 +9,12 @@ import Navigation from "./component/Navigation";
 import Intro from "./pages/Intro";
 
 function App() {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(false); // slå evt. intro til/fra
   const location = useLocation();
-
-  const showNav = location.pathname !== "/"; // ⬅️ skjul nav på forsiden
+  const showNav = location.pathname !== "/";
 
   return (
-    <div>
+    <>
       {showIntro && <Intro onFinish={() => setShowIntro(false)} />}
       {!showIntro && (
         <>
@@ -29,7 +28,7 @@ function App() {
           </Routes>
         </>
       )}
-    </div>
+    </>
   );
 }
 export default App;

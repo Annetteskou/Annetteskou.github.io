@@ -1,12 +1,59 @@
-/* FULL-BLEED BAGGRUND */
+/* ---------- LAYOUT & BAGGRUND ---------- */
 .home{
+  --pad: clamp(18px, 4vw, 36px);
   min-height: 100dvh;
-  padding: 18px clamp(18px, 4vw, 36px);
+  padding: 18px var(--pad);
   background: url("/grid_gray_robot.png") center/cover no-repeat #2d313b;
   color:#eaeaea;
 }
 
-/* PILL NAV – præcis glossy look + aktiv knap */
+/* kant-til-kant tykke linjer */
+.home > .rule{
+  margin-left: calc(-1 * var(--pad));
+  margin-right: calc(-1 * var(--pad));
+}
+
+/* ÉN linje med gradient – ikke to lag */
+.rule{
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #6EA0DC 0%, #FFFFFF 100%);
+}
+
+/* øverste linje (lige under nav) */
+.ruleTop{
+  margin-top: 10px;
+}
+
+.ruleMid{
+  margin-top: 10px;
+  
+
+}
+
+
+.hero{
+  display:grid;
+  grid-template-columns: 1.08fr .92fr;
+  grid-auto-rows: auto;
+  gap: clamp(28px, 5vw, 70px);
+  align-items:start;
+  margin-top: clamp(18px, 5vw, 34px);
+}
+
+/* placér venstre og højre i række 1 */
+.left  { grid-column: 1; grid-row: 1; }
+.right { grid-column: 2; grid-row: 1; }
+
+
+/* kant-til-kant (behold dit pad-trick) */
+.home{ --pad: clamp(18px, 4vw, 36px); }
+.home > .rule{
+  margin-left: calc(-1 * var(--pad));
+  margin-right: calc(-1 * var(--pad));
+}
+
+/* ---------- PILL NAV ---------- */
 .pillNav{ display:flex; gap:12px; align-items:center; margin-bottom: 8px; }
 .pill{
   padding: 6px 16px;
@@ -32,52 +79,51 @@
     0 1px 2px rgba(0,0,0,0.25);
 }
 
-/* TYKKE LINJER (som i mock) */
-.rule{ height:8px; }
-.ruleTop{
-  margin-top: 10px;
-  background:
-    linear-gradient(0deg, rgba(110,160,220,.72), rgba(110,160,220,.72)) bottom/100% 3px no-repeat,
-    linear-gradient(0deg, rgba(255,255,255,.85), rgba(255,255,255,.85)) top/100% 3px no-repeat;
-}
-.ruleMid{
-  margin: clamp(26px, 6vw, 44px) 0 0 0;
-  background:
-    linear-gradient(0deg, rgba(110,160,220,.72), rgba(110,160,220,.72)) bottom/100% 3px no-repeat,
-    linear-gradient(0deg, rgba(255,255,255,.8), rgba(255,255,255,.8)) top/100% 3px no-repeat;
-}
-
-/* HERO GRID */
+/* ---------- HERO ---------- */
 .hero{
   display:grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1.08fr .92fr;
   gap: clamp(28px, 5vw, 70px);
   align-items:start;
   margin-top: clamp(18px, 5vw, 34px);
 }
 
-/* VENSTRE – titel + intro + socials */
+/* Venstre */
 .title{
   font-family: "Courier New", Courier, monospace;
   font-weight: 700;
-  line-height: 1.04;
+  line-height: 1.16;
   font-size: clamp(36px, 6.9vw, 76px);
   margin: 0 0 18px 0;
   color:#fff;
-  -webkit-text-stroke: 1px rgba(0,0,0,.35);
+  -webkit-text-stroke: 0.8px rgba(0,0,0,.25);
 }
+
+/* “Hej jeg er” + navn (to linjer) */
 .helloRow{
-  display:grid; grid-template-columns: auto 1fr auto;
-  align-items:center; gap:14px; margin-top: 8px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top: 8px;
 }
-.muted{ color:#cbd5e1cc; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-.dash{ height:2px; background:#9fbbe3a6; }
+.muted{
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: x-large;
+}
+.dash{
+  width: clamp(90px, 12vw, 180px);
+  height: 2px;
+  background:rgb(193, 188, 188);
+}
 .name{
   font-family:"Courier New", Courier, monospace;
-  font-size: clamp(20px, 3vw, 34px);
-  color:#fff; text-align:right;
+  font-size: clamp(30px, 3vw, 34px);
+  color:#fff;
+  line-height: 1.2;
+  text-align:left; /* står lige efter stregen */
 }
-.socials{ display:flex; gap:14px; margin-top: clamp(18px, 3vw, 26px); }
+.socials{ display:flex; gap:14px; margin-top: 18px; }
 .socials img{
   width:60px; height:60px; object-fit:contain; border-radius:10px;
   filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
@@ -85,11 +131,11 @@
 }
 .socials img:hover{ transform: translateY(-2px); filter: drop-shadow(0 10px 24px rgba(0,0,0,.5)); }
 
-/* HØJRE – rolle + dobbeltram med monitor */
-.right{ display:flex; flex-direction:column; align-items:flex-end; gap:18px; }
+/* Højre */
+.right{ display:flex; flex-direction:column; align-items:flex-end; gap:24px; }
 .role{
-  margin: 2px 6px 0 0;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin: 6px 6px 0 0;
+  font-family:'Courier New', Courier, monospace;
   text-align:right;
   color:#9ec1f1;
   font-size: clamp(14px, 1.9vw, 20px);
@@ -97,31 +143,38 @@
 .chev{ color:#87aee6; margin-right:6px; }
 .subRole{ color:#c7d2e5; }
 
+/* --- MONITOR-STØRRELSE & FRAMING --- */
 .monitorWrap{
   position: relative;
-  width: min(440px, 45vw);
-  padding: 20px;
-  border-radius: 16px;
-  border: 4px solid rgba(255,255,255,.9);
+  width: min(420px, 38vw);   /* mindre som i mockup */
+  padding: 24px;             /* luft omkring monitoren */
+  border: none;              /* fjern hvid ydre ramme */
+  box-shadow: none;   
+  margin-top: 220px;       /* ingen glow-ramme */
 }
-.monitorWrap::after{
-  content:"";
-  position:absolute; inset: -16px;
-  border: 4px solid rgba(255,255,255,.75);
-  border-radius: 18px;
-}
-.monitorFrame{
-  border: 4px solid #fff;
-  border-radius: 14px;
-  padding: 16px;
-  background: rgba(0,0,0,.15);
-}
-.monitorFrame img{ width:100%; height:auto; display:block; border-radius:8px; }
 
-/* RESPONSIV */
+.monitorWrap::after{         /* fjern den dobbelte ydre ramme */
+  display: none;
+}
+
+
+.monitorFrame img{
+  display:block;
+  width: 65%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ---------- RESPONSIV ---------- */
+@media (max-width: 1200px){
+  .title{ font-size: clamp(36px, 7.8vw, 72px); }
+}
 @media (max-width: 980px){
   .hero{ grid-template-columns:1fr; }
   .right{ align-items:flex-start; }
   .role{ text-align:left; }
   .monitorWrap{ width: min(560px, 92vw); }
+}
+@media (max-width: 700px){
+  .socials img{ width:50px; height:50px; }
 }

@@ -4,9 +4,10 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <main className={styles.home}>
-      {/* PILL-NAV i toppen */}
+      {/* PILL NAV øverst */}
       <nav className={styles.pillNav}>
         <span className={`${styles.pill} ${styles.pillCode}`}>&lt;/&gt;</span>
+
         <NavLink
           to="/"
           end
@@ -16,6 +17,7 @@ export default function Home() {
         >
           Hjem
         </NavLink>
+
         <NavLink
           to="/project"
           className={({ isActive }) =>
@@ -24,6 +26,7 @@ export default function Home() {
         >
           Projekt
         </NavLink>
+
         <NavLink
           to="/about"
           className={({ isActive }) =>
@@ -32,6 +35,7 @@ export default function Home() {
         >
           Om mig
         </NavLink>
+
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -42,20 +46,23 @@ export default function Home() {
         </NavLink>
       </nav>
 
-      {/* Øverste linje (tyk) */}
+      {/* Øverste tykke linje */}
       <div className={`${styles.rule} ${styles.ruleTop}`} />
 
       {/* HERO */}
       <section className={styles.hero}>
-        {/* Venstre: stor titel + intro + socials */}
-        <div className={styles.left}>
+        {/* Venstre kolonne */}
+        <div>
           <h1 className={styles.title}>
             Velkommen
             <br />
             til mit
             <br />
-            portfolie
+            portfolio
           </h1>
+          
+          {/* Mellemlinje */}
+          <div className={`${styles.rule} ${styles.ruleMid}`} />
 
           <div className={styles.helloRow}>
             <span className={styles.muted}>...Hej jeg er</span>
@@ -83,16 +90,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Højre: rolle + monitor i dobbeltram */}
+        {/* Højre kolonne */}
         <div className={styles.right}>
           <p className={styles.role}>
             <span className={styles.chev}>&gt;</span>
-            Multimediedesigner Studterne
+            Multimediedesigner studerende
             <br />
             <span className={styles.chev}>&gt;</span>
             <span className={styles.subRole}>
-              {" "}
-              Frontend developer studeterne
+              Frontend-udvikler (studerende)
             </span>
           </p>
 
@@ -106,9 +112,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Midter-linje (tyk) */}
-      <div className={`${styles.rule} ${styles.ruleMid}`} />
     </main>
   );
 }

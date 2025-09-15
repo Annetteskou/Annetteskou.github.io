@@ -12,21 +12,24 @@
   margin-bottom: 4rem;
 }
 
-.leftColumn, .rightColumn {
+.leftColumn,
+.rightColumn {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 .title {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 2rem;
   color: #a9c5e8;
   margin-bottom: 1rem;
+  font-weight: normal;
 }
 
-.aboutSection p, .hobbiesSection p {
-  font-family: 'Courier New', Courier, monospace;
+.aboutSection p,
+.hobbiesSection p {
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 60ch;
@@ -40,15 +43,16 @@
 
 .button {
   padding: 0.5rem 1.5rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
   color: #fff;
   text-decoration: none;
-  background: linear-gradient(135deg, #5B73A5 0%, #EAEAEA 100%);
+  background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -70,10 +74,11 @@
 }
 
 .skillsTitle {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
   color: #a9c5e8;
   margin-top: 0;
+  font-weight: normal;
 }
 
 .skillsGrid {
@@ -145,7 +150,14 @@
 }
 
 /* Uniform icon container sizes */
-.jsIcon, .reactIcon, .htmlIcon, .cssIcon, .viteIcon, .figmaIcon, .psIcon, .aiIcon {
+.jsIcon,
+.reactIcon,
+.htmlIcon,
+.cssIcon,
+.viteIcon,
+.figmaIcon,
+.psIcon,
+.aiIcon {
   width: 65px;
   height: 65px;
 }
@@ -168,7 +180,7 @@
 }
 
 .jsIcon {
-  transform: scale(1.0);
+  transform: scale(1);
 }
 
 .cssIcon {
@@ -186,33 +198,128 @@
 .skillItem span {
   font-size: 0.9rem;
   color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
 /* Image Windows */
-.imageWindows, .bottomImages {
+.imageWindows {
   position: relative;
-  min-height: 400px; /* Ensure container has height for absolute positioning */
+  height: 420px;
+  margin-bottom: 2rem;
 }
 
 .imageWindow {
   position: absolute;
 }
 
-.img1 { top: 0; left: 10%; width: 250px; z-index: 2; }
-.img2 { top: 50px; left: 40%; width: 250px; z-index: 3; }
-.img3 { top: 120px; left: 20%; width: 250px; z-index: 1; }
-
-.bottomImages {
-  margin-top: 4rem;
-  min-height: 500px;
+.imageWindow::before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(to bottom, #0080ff 0%, #0060df 100%);
+  border: 1px outset #c0c0c0;
+  border-bottom: none;
 }
 
-.img4 { top: 50px; left: 5%; width: 300px; }
-.img5 { top: 0; left: 25%; width: 200px; }
-.img6 { top: 150px; left: 50%; width: 350px; }
-.img7 { top: 100px; left: 75%; width: 150px; }
+.imageWindow::after {
+  content: "untitled - Paint";
+  position: absolute;
+  top: -20px;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 11px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.imageWindow img {
+  display: block;
+  margin: 25px 8px 8px 8px;
+}
+
+.img1 {
+  top: 10px;
+  width: 360px;
+  height: 270px;
+  z-index: 1;
+}
+
+.img2 {
+  top: 120px;
+  width: 340px;
+  height: 250px;
+  z-index: 4;
+}
+
+.img3 {
+  top: 40px;
+  left: 40%;
+  width: 300px;
+  height: 260px;
+  z-index: 2;
+}
+
+.bottomImages {
+  position: relative;
+  height: 400px;
+  margin-top: 4rem;
+}
+
+.img4 {
+  top: 30px;
+  left: 5%;
+  width: 200px;
+  height: 160px;
+}
+
+.img4 img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.img5 {
+  top: 0;
+  left: 25%;
+  width: 180px;
+  height: 160px;
+}
+
+.img5 img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.img6 {
+  top: 80px;
+  left: 45%;
+  width: 220px;
+  height: 190px;
+}
+
+.img6 img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.img7 {
+  top: 60px;
+  left: 70%;
+  width: 160px;
+  height: 140px;
+}
+
+.img7 img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+}
 
 .contactSection {
   text-align: center;

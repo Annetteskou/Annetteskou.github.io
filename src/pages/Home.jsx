@@ -51,28 +51,28 @@ export default function Home() {
           <div className={styles.socials}>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
               <img
-                src="/GITHUB.png"
+                src="/images/GITHUB.png"
                 alt="GitHub"
                 className={styles.githubIcon}
               />
             </a>
             <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
               <img
-                src="/LINK.png"
+                src="/images/LINK.png"
                 alt="LinkedIn"
                 className={styles.linkedinIcon}
               />
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noreferrer">
               <img
-                src="/instagram.png"
+                src="/images/instagram.png"
                 alt="Instagram"
                 className={styles.instagramIcon}
               />
             </a>
             <a href="https://facebook.com/" target="_blank" rel="noreferrer">
               <img
-                src="/facebook.png"
+                src="/images/facebook.png"
                 alt="Facebook"
                 className={styles.facebookIcon}
               />
@@ -83,7 +83,7 @@ export default function Home() {
         <div className={styles.monitorWrap}>
           <div className={styles.monitorFrame}>
             <img
-              src="/Computer Coding Sticker by Rijn IJssel.gif"
+              src="/images/Computer Coding Sticker by Rijn IJssel.gif"
               alt="Coding monitor"
             />
           </div>

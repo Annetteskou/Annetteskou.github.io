@@ -77,7 +77,7 @@ export default function Home() {
               <span className={styles.name}>
                 Annette
                 <br />
-                Skou
+                <span className={styles.lastName}>Skou</span>
               </span>
             </div>
             <div className={styles.codeSymbol}>

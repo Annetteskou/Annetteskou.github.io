@@ -1,180 +1,323 @@
-/* ---------- LAYOUT & BAGGRUND ---------- */
-.home{
+/* ========= BAGGRUND ========= */
+.home {
   --pad: clamp(18px, 4vw, 36px);
+  --band-gap: clamp(28px, 5vw, 56px); /* afstand fra titel til hver linje */
   min-height: 100dvh;
   padding: 18px var(--pad);
   background: url("/grid_gray_robot.png") center/cover no-repeat #2d313b;
-  color:#eaeaea;
+  color: #eaeaea;
 }
 
-/* kant-til-kant tykke linjer */
-.home > .rule{
-  margin-left: calc(-1 * var(--pad));
-  margin-right: calc(-1 * var(--pad));
-}
-
-/* ÉN linje med gradient – ikke to lag */
-.rule{
+/* ========= LINJER ========= */
+.rule {
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(90deg, #6EA0DC 0%, #FFFFFF 100%);
+  background: linear-gradient(90deg, #6ea0dc 0%, #ffffff 100%);
 }
 
-/* øverste linje (lige under nav) */
-.ruleTop{
-  margin-top: 10px;
-}
-
-.ruleMid{
-  margin-top: 10px;
-  
-
-}
-
-
-.hero{
-  display:grid;
-  grid-template-columns: 1.08fr .92fr;
-  grid-auto-rows: auto;
-  gap: clamp(28px, 5vw, 70px);
-  align-items:start;
-  margin-top: clamp(18px, 5vw, 34px);
-}
-
-/* placér venstre og højre i række 1 */
-.left  { grid-column: 1; grid-row: 1; }
-.right { grid-column: 2; grid-row: 1; }
-
-
-/* kant-til-kant (behold dit pad-trick) */
-.home{ --pad: clamp(18px, 4vw, 36px); }
-.home > .rule{
+/* top-linje skal ikke klistre til nav */
+.home > .ruleTop {
+  margin-top: 80px;
+  margin-bottom: -50px;
   margin-left: calc(-1 * var(--pad));
   margin-right: calc(-1 * var(--pad));
+  width: calc(100% + var(--pad) * 2);
 }
 
-/* ---------- PILL NAV ---------- */
-.pillNav{ display:flex; gap:12px; align-items:center; margin-bottom: 8px; }
-.pill{
+/* midterlinjen går på tværs og er symmetrisk under titel */
+.ruleMid {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: -30px;
+  margin-left: calc(-1 * var(--pad));
+  margin-right: calc(-1 * var(--pad));
+  width: calc(100% + var(--pad) * 2);
+  background: linear-gradient(90deg, #ffffff 0%, #6ea0dc 100%);
+}
+
+/* ========= HERO GRID ========= */
+/* Række 1: titel (venstre) + rolle (højre)
+   Række 2: midterlinje
+   Række 3: intro/socials (venstre) + monitor (højre) */
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-rows: auto auto auto;
+  gap: clamp(5px, 1vw, 10px);
+  align-items: start;
+  margin-top: clamp(8px, 2vw, 16px);
+}
+
+/* ----- Række 1 ----- */
+.titleBlock {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* overskriften får luft op og ned = ligger "midt mellem" linjerne */
+.title {
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.14;
+  font-size: clamp(48px, 7vw, 70px);
+  color: #fff;
+  margin-left: 100px;
+  font-weight: normal;
+}
+
+/* Rolle-tekst: midt i højre kolonne på samme højde som titlen */
+.role {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center; /* lodret midt i båndet */
+  justify-self: end; /* højre-justeret i kolonnen */
+  text-align: right;
+  margin: 0;
+  max-width: none;
+  white-space: nowrap;
+  padding-right: clamp(40px, 6vw, 80px);
+  font-family: "Courier New", Courier, monospace;
+  color: #9ec1f1;
+  font-size: clamp(20px, 3vw, 28px);
+  line-height: 1.3;
+}
+.chev {
+  color: #87aee6;
+  margin-left: 6px;
+}
+.subRole {
+  color: #c7d2e5;
+  font-size: clamp(18px, 2.5vw, 24px);
+}
+
+/* ----- Række 3 ----- */
+.leftBottom {
+  grid-column: 1;
+  grid-row: 3;
+  margin-left: 100px;
+}
+
+/* “Hej jeg er” + navn */
+.helloRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+.muted {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(18px, 2.5vw, 24px);
+}
+.dash {
+  width: clamp(60px, 8vw, 100px);
+  height: 1px;
+  background: white;
+}
+.name {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(36px, 5vw, 52px);
+  color: #fff;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* Intro section */
+.introSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* Code symbol */
+.codeSymbol {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(16px, 2.5vw, 24px);
+  color: white;
+  font-weight: bold;
+  margin-left: 0;
+  align-self: flex-start;
+  margin-top: -8px;
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+  align-items: center;
+}
+
+/* Individual social icon classes */
+.githubIcon {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.8));
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+  background: transparent;
+  padding: 0;
+  display: block;
+  border: none;
+}
+.linkedinIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.8));
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+.instagramIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.8));
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+.facebookIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.8));
+  transition: transform 0.12s ease, filter 0.12s ease, box-shadow 0.12s ease;
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+
+.githubIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4);
+}
+.linkedinIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4);
+}
+.instagramIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4);
+}
+.facebookIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+/* Monitor – mindre og trukket ind fra højre */
+.monitorWrap {
+  grid-column: 2;
+  grid-row: 3;
+  justify-self: start;
+  width: min(240px, 21vw); /* <- skala som mockup; justér her hvis ønsket */
+  margin: 0;
+  margin-left: -40px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.monitorWrap::before,
+.monitorWrap::after {
+  display: none;
+}
+.monitorFrame {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.monitorFrame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+/* ========= PILL NAV ========= */
+.pillNav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.pill {
   padding: 6px 16px;
   border-radius: 10px;
   font: 700 14px/1.1 system-ui, sans-serif;
   color: #1a273d;
   text-decoration: none;
   background: linear-gradient(180deg, #d8e6f8 0%, #93accd 100%);
-  border: 1px solid rgba(255,255,255,.9);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    inset 0 -2px 4px rgba(0,0,0,0.25),
-    0 2px 4px rgba(0,0,0,0.3);
-  transition: transform .12s ease, filter .12s ease;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.12s ease, filter 0.12s ease;
 }
-.pill:hover{ filter: brightness(.96); transform: translateY(1px); }
-.pillCode{ font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight:600; }
-.active{
+.pill:hover {
+  filter: brightness(0.96);
+  transform: translateY(1px);
+}
+.pillCode {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 600;
+}
+.active {
   background: linear-gradient(180deg, #eef5ff 0%, #a8bdd9 100%);
-  box-shadow:
-    inset 0 2px 3px rgba(255,255,255,0.9),
-    inset 0 -2px 5px rgba(0,0,0,0.28),
-    0 1px 2px rgba(0,0,0,0.25);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.9),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.28), 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- HERO ---------- */
-.hero{
-  display:grid;
-  grid-template-columns: 1.08fr .92fr;
-  gap: clamp(28px, 5vw, 70px);
-  align-items:start;
-  margin-top: clamp(18px, 5vw, 34px);
+/* ========= RESPONSIV ========= */
+@media (max-width: 1200px) {
+  .monitorWrap {
+    width: min(220px, 23vw);
+  }
 }
-
-/* Venstre */
-.title{
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 700;
-  line-height: 1.16;
-  font-size: clamp(36px, 6.9vw, 76px);
-  margin: 0 0 18px 0;
-  color:#fff;
-  -webkit-text-stroke: 0.8px rgba(0,0,0,.25);
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .titleBlock {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .role {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    text-align: left;
+    margin-top: 8px;
+  }
+  .ruleMid {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .leftBottom {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .monitorWrap {
+    grid-column: 1;
+    grid-row: 3;
+    width: min(420px, 88vw);
+    justify-self: start;
+  }
 }
-
-/* “Hej jeg er” + navn (to linjer) */
-.helloRow{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-top: 8px;
-}
-.muted{
-  color:white;
-  font-family:'Courier New', Courier, monospace;
-  font-size: x-large;
-}
-.dash{
-  width: clamp(90px, 12vw, 180px);
-  height: 2px;
-  background:rgb(193, 188, 188);
-}
-.name{
-  font-family:"Courier New", Courier, monospace;
-  font-size: clamp(30px, 3vw, 34px);
-  color:#fff;
-  line-height: 1.2;
-  text-align:left; /* står lige efter stregen */
-}
-.socials{ display:flex; gap:14px; margin-top: 18px; }
-.socials img{
-  width:60px; height:60px; object-fit:contain; border-radius:10px;
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
-  transition: transform .12s ease, filter .12s ease;
-}
-.socials img:hover{ transform: translateY(-2px); filter: drop-shadow(0 10px 24px rgba(0,0,0,.5)); }
-
-/* Højre */
-.right{ display:flex; flex-direction:column; align-items:flex-end; gap:24px; }
-.role{
-  margin: 6px 6px 0 0;
-  font-family:'Courier New', Courier, monospace;
-  text-align:right;
-  color:#9ec1f1;
-  font-size: clamp(14px, 1.9vw, 20px);
-}
-.chev{ color:#87aee6; margin-right:6px; }
-.subRole{ color:#c7d2e5; }
-
-/* --- MONITOR-STØRRELSE & FRAMING --- */
-.monitorWrap{
-  position: relative;
-  width: min(420px, 38vw);   /* mindre som i mockup */
-  padding: 24px;             /* luft omkring monitoren */
-  border: none;              /* fjern hvid ydre ramme */
-  box-shadow: none;   
-  margin-top: 220px;       /* ingen glow-ramme */
-}
-
-.monitorWrap::after{         /* fjern den dobbelte ydre ramme */
-  display: none;
-}
-
-
-.monitorFrame img{
-  display:block;
-  width: 65%;
-  height: auto;
-  border-radius: 10px;
-}
-
-/* ---------- RESPONSIV ---------- */
-@media (max-width: 1200px){
-  .title{ font-size: clamp(36px, 7.8vw, 72px); }
-}
-@media (max-width: 980px){
-  .hero{ grid-template-columns:1fr; }
-  .right{ align-items:flex-start; }
-  .role{ text-align:left; }
-  .monitorWrap{ width: min(560px, 92vw); }
-}
-@media (max-width: 700px){
-  .socials img{ width:50px; height:50px; }
+@media (max-width: 700px) {
+  .socials img {
+    width: 50px;
+    height: 50px;
+  }
 }

@@ -60,13 +60,13 @@
 
 /* Skills Container - Glassmorphism */
 .skillsContainer {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.01);
   border-radius: 15px;
   padding: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
 }
 
 .skillsTitle {
@@ -99,40 +99,49 @@
 }
 
 .skillsGrid img:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) rotateY(360deg);
+  transition: transform 0.6s ease;
 }
 
 /* Hover states for scaled icons */
 .reactIcon:hover {
-  transform: scale(2.75); /* 2.5 * 1.1 */
+  transform: scale(2.75) rotateY(360deg); /* 2.5 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .htmlIcon:hover {
-  transform: scale(3.85); /* 3.5 * 1.1 */
+  transform: scale(4.18) rotateY(360deg); /* 3.8 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .figmaIcon:hover {
-  transform: scale(3.3); /* 3.0 * 1.1 */
+  transform: scale(3.08) rotateY(360deg); /* 2.8 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .viteIcon:hover {
-  transform: scale(1.98); /* 1.8 * 1.1 */
+  transform: scale(1.87) rotateY(360deg); /* 1.7 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .jsIcon:hover {
-  transform: scale(1.045); /* 0.95 * 1.1 */
+  transform: scale(1.045) rotateY(360deg); /* 0.95 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .cssIcon:hover {
-  transform: scale(1.76); /* 1.6 * 1.1 */
+  transform: scale(1.65) rotateY(360deg); /* 1.5 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .psIcon:hover {
-  transform: scale(2.42); /* 2.2 * 1.1 */
+  transform: scale(1.43) rotateY(360deg); /* 1.3 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 .aiIcon:hover {
-  transform: scale(1.98); /* 1.8 * 1.1 */
+  transform: scale(1.65) rotateY(360deg); /* 1.5 * 1.1 */
+  transition: transform 0.6s ease;
 }
 
 /* Uniform icon container sizes */
@@ -143,35 +152,35 @@
 
 /* Scale adjustments for visual uniformity */
 .reactIcon {
-  transform: scale(2.5);
+  transform: scale(2.3);
 }
 
 .htmlIcon {
-  transform: scale(3.5);
+  transform: scale(3.8);
 }
 
 .figmaIcon {
-  transform: scale(3.0);
+  transform: scale(2.8);
 }
 
 .viteIcon {
-  transform: scale(1.8);
+  transform: scale(1.7);
 }
 
 .jsIcon {
-  transform: scale(0.95);
+  transform: scale(1.0);
 }
 
 .cssIcon {
-  transform: scale(1.6);
+  transform: scale(1.5);
 }
 
 .psIcon {
-  transform: scale(2.2);
+  transform: scale(1.3);
 }
 
 .aiIcon {
-  transform: scale(1.8);
+  transform: scale(1.5);
 }
 
 .skillItem span {

@@ -103,14 +103,16 @@
   align-items: center;
   gap: 12px;
   margin-top: 8px;
+  margin-left: -10px;
 }
 .muted {
   color: white;
   font-family: "Courier New", Courier, monospace;
-  font-size: clamp(30px, 2.5vw, 24px);
+  font-size: clamp(25px, 2.5vw, 24px);
+  white-space: nowrap;
 }
 .dash {
-  width: clamp(60px, 8vw, 100px);
+  width: clamp(60px, 5vw, 100px);
   height: 1px;
   background: white;
 }
@@ -121,6 +123,7 @@
   line-height: 1.2;
   text-align: left;
   font-weight: bold;
+  margin-top: 40px;
 }
 
 .lastName {
@@ -140,19 +143,18 @@
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(16px, 2.5vw, 24px);
   color: white;
-  margin-left: 110px;
+  margin-left: 95px;
   align-self: flex-start;
-  margin-top: -50px;
-  margin-bottom: 20px;
+  margin-top: -65px;
 }
 
 /* Socials */
 .socials {
   display: flex;
   gap: 14px;
-  margin-top: 20px;
+  margin-top: 50px;
   align-items: center;
-  margin-left: 50px;
+  margin-left: 5px;
 }
 
 /* Individual social icon classes */
@@ -230,7 +232,7 @@
   justify-self: start;
   width: min(300px, 21vw); /* <- skala som mockup; justér her hvis ønsket */
   margin: 0;
-  margin-left: 120px;
+  margin-left: 200px;
   padding: 0;
   border: none;
   box-shadow: none;
@@ -252,38 +254,6 @@
   border-radius: 0;
 }
 
-/* ========= PILL NAV ========= */
-.pillNav {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.pill {
-  padding: 6px 16px;
-  border-radius: 10px;
-  font: 700 14px/1.1 system-ui, sans-serif;
-  color: #1a273d;
-  text-decoration: none;
-  background: linear-gradient(180deg, #d8e6f8 0%, #93accd 100%);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95),
-    inset 0 -2px 4px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.12s ease, filter 0.12s ease;
-}
-.pill:hover {
-  filter: brightness(0.96);
-  transform: translateY(1px);
-}
-.pillCode {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-weight: 600;
-}
-.active {
-  background: linear-gradient(180deg, #eef5ff 0%, #a8bdd9 100%);
-  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.9),
-    inset 0 -2px 5px rgba(0, 0, 0, 0.28), 0 1px 2px rgba(0, 0, 0, 0.25);
-}
 
 /* ========= RESPONSIV ========= */
 @media (max-width: 1200px) {

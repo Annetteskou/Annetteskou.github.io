@@ -1,43 +1,57 @@
-:root { --nav-h: 64px; }
-
 .nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  height: var(--nav-h);
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 2rem clamp(1rem, 5vw, 3rem);
+  gap: 1rem; /* Add gap between symbol and buttons */
+  background: transparent;
+  margin-bottom: -50px;
+}
+
+.codeSymbol {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  /* Override any link styles */
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.navLinks {
+  display: flex;
   gap: 1rem;
-  padding: 0 clamp(16px, 4vw, 32px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  backdrop-filter: blur(6px);
 }
 
 .link {
-  color: #c9d2df;
+  display: block;
+  padding: 0.5rem 1.75rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.5rem;
+  color: #fff; /* White text */
   text-decoration: none;
-  font-weight: 600;
-  padding: 8px 10px;
-  border-radius: 8px;
-  transition: color .2s ease, background .2s ease;
+  background: linear-gradient(135deg, #5B73A5 0%, #EAEAEA 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  /* Black outline on white text */
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  transition: all 0.15s ease;
 }
 
 .link:hover {
-  color: #ffffff;
-  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .active {
-  color: #ffffff;
-  background: transparent;
-  position: relative;
-}
-
-.active::after {
-  content: "";
-  position: absolute;
-  left: 10px; right: 10px; bottom: 6px;
-  height: 2px;
-  background: linear-gradient(90deg, #a7c5ff, #6fa8ff);
-  border-radius: 2px;
+  background: linear-gradient(135deg, #4A5F8A 0%, #D0D0D0 100%);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
+  transform: translateY(1px);
 }

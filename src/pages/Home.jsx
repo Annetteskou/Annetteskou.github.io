@@ -4,43 +4,6 @@ import styles from "./Home.module.css";
 export default function Home() {
   return (
     <main className={styles.home}>
-      {/* Top pill-nav */}
-      <nav className={styles.pillNav}>
-        <span className={`${styles.pill} ${styles.pillCode}`}>&lt;/&gt;</span>
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) =>
-            isActive ? `${styles.pill} ${styles.active}` : styles.pill
-          }
-        >
-          Hjem
-        </NavLink>
-        <NavLink
-          to="/project"
-          className={({ isActive }) =>
-            isActive ? `${styles.pill} ${styles.active}` : styles.pill
-          }
-        >
-          Projekt
-        </NavLink>
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? `${styles.pill} ${styles.active}` : styles.pill
-          }
-        >
-          Om mig
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            isActive ? `${styles.pill} ${styles.active}` : styles.pill
-          }
-        >
-          Kontakt
-        </NavLink>
-      </nav>
 
       {/* Øverste linje (kant-til-kant) */}
       <div className={`${styles.rule} ${styles.ruleTop}`} />

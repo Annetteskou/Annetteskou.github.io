@@ -11,7 +11,7 @@ import Intro from "./pages/Intro";
 function App() {
   const [showIntro, setShowIntro] = useState(false); // slå evt. intro til/fra
   const location = useLocation();
-  const showNav = location.pathname !== "/";
+  const showNav = true; // Always show navigation
 
   return (
     <>

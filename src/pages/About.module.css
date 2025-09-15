@@ -21,10 +21,10 @@
 
 .title {
   font-family: "Courier New", Courier, monospace;
-  font-size: 2rem;
-  color: #a9c5e8;
-  margin-bottom: 1rem;
-  font-weight: normal;
+  font-size: 3.5rem;
+  color: #81ace1;
+  font-weight:normal;
+  margin-bottom: -10px;
 }
 
 .aboutSection p,
@@ -71,6 +71,7 @@
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  margin-top: 3rem;
 }
 
 .skillsTitle {
@@ -213,51 +214,25 @@
   position: absolute;
 }
 
-.imageWindow::before {
-  content: "";
-  position: absolute;
-  top: -22px;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background: linear-gradient(to bottom, #0080ff 0%, #0060df 100%);
-  border: 1px outset #c0c0c0;
-  border-bottom: none;
-}
-
-.imageWindow::after {
-  content: "untitled - Paint";
-  position: absolute;
-  top: -20px;
-  font-family: "MS Sans Serif", sans-serif;
-  font-size: 11px;
-  color: white;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
-}
-
-.imageWindow img {
-  display: block;
-  margin: 25px 8px 8px 8px;
-}
-
 .img1 {
-  top: 10px;
-  width: 360px;
-  height: 270px;
+  top: 50px;
+  left: 10%;
+  width: 300px;
+  height: 260px;
   z-index: 1;
 }
 
 .img2 {
-  top: 120px;
-  width: 340px;
-  height: 250px;
+  top: 220px;
+  left: 100px;
+  width: 350px;
+  height: 260px;
   z-index: 4;
 }
 
 .img3 {
-  top: 40px;
-  left: 40%;
+  top: 80px;
+  left: 50%;
   width: 300px;
   height: 260px;
   z-index: 2;

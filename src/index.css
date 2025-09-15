@@ -1,15 +1,15 @@
 /* index.css */
 
+html {
+  background: url("/grid_gray_robot.png") center/cover no-repeat fixed #2d313b;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: system-ui, Arial, sans-serif;
+  min-height: 100%;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.5;
-}
-
-html {
-  background: url("/grid_gray_robot.png") center/cover no-repeat #2d313b;
 }
 
 body {

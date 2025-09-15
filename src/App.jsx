@@ -9,13 +9,22 @@ import Navigation from "./component/Navigation";
 import Intro from "./pages/Intro";
 
 function App() {
-  const [showIntro, setShowIntro] = useState(false); // slå evt. intro til/fra
+  const [showIntro, setShowIntro] = useState(() => {
+    // Only show the intro if it hasn't been seen in this session
+    return !sessionStorage.getItem("introSeen");
+  });
+
   const location = useLocation();
   const showNav = true; // Always show navigation
 
+  const handleIntroFinish = () => {
+    setShowIntro(false);
+    sessionStorage.setItem("introSeen", "true");
+  };
+
   return (
     <>
-      {showIntro && <Intro onFinish={() => setShowIntro(false)} />}
+      {showIntro && <Intro onFinish={handleIntroFinish} />}
       {!showIntro && (
         <>
           {showNav && <Navigation />}

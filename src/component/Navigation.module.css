@@ -28,7 +28,7 @@
 .link {
   display: block;
   padding: 0.5rem 1.75rem;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 1.5rem;
   color: #fff; /* White text */
   text-decoration: none;

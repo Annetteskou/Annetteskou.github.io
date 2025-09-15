@@ -1,0 +1,211 @@
+/* About.module.css */
+
+.aboutPage {
+  padding: 2rem clamp(1rem, 5vw, 3rem);
+  color: #eaeaea;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.leftColumn, .rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2rem;
+  color: #a9c5e8;
+  margin-bottom: 1rem;
+}
+
+.aboutSection p, .hobbiesSection p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.buttonGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #5B73A5 0%, #EAEAEA 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Skills Container - Glassmorphism */
+.skillsContainer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.skillsTitle {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: #a9c5e8;
+  margin-top: 0;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem 1.5rem; /* row-gap column-gap */
+  align-items: center;
+  justify-items: center;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+/* Base styles for all skill icons */
+.skillsGrid img {
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.skillsGrid img:hover {
+  transform: scale(1.1);
+}
+
+/* Hover states for scaled icons */
+.reactIcon:hover {
+  transform: scale(2.75); /* 2.5 * 1.1 */
+}
+
+.htmlIcon:hover {
+  transform: scale(3.85); /* 3.5 * 1.1 */
+}
+
+.figmaIcon:hover {
+  transform: scale(3.3); /* 3.0 * 1.1 */
+}
+
+.viteIcon:hover {
+  transform: scale(1.98); /* 1.8 * 1.1 */
+}
+
+.jsIcon:hover {
+  transform: scale(1.045); /* 0.95 * 1.1 */
+}
+
+.cssIcon:hover {
+  transform: scale(1.76); /* 1.6 * 1.1 */
+}
+
+.psIcon:hover {
+  transform: scale(2.42); /* 2.2 * 1.1 */
+}
+
+.aiIcon:hover {
+  transform: scale(1.98); /* 1.8 * 1.1 */
+}
+
+/* Uniform icon container sizes */
+.jsIcon, .reactIcon, .htmlIcon, .cssIcon, .viteIcon, .figmaIcon, .psIcon, .aiIcon {
+  width: 65px;
+  height: 65px;
+}
+
+/* Scale adjustments for visual uniformity */
+.reactIcon {
+  transform: scale(2.5);
+}
+
+.htmlIcon {
+  transform: scale(3.5);
+}
+
+.figmaIcon {
+  transform: scale(3.0);
+}
+
+.viteIcon {
+  transform: scale(1.8);
+}
+
+.jsIcon {
+  transform: scale(0.95);
+}
+
+.cssIcon {
+  transform: scale(1.6);
+}
+
+.psIcon {
+  transform: scale(2.2);
+}
+
+.aiIcon {
+  transform: scale(1.8);
+}
+
+.skillItem span {
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* Image Windows */
+.imageWindows, .bottomImages {
+  position: relative;
+  min-height: 400px; /* Ensure container has height for absolute positioning */
+}
+
+.imageWindow {
+  position: absolute;
+}
+
+.img1 { top: 0; left: 10%; width: 250px; z-index: 2; }
+.img2 { top: 50px; left: 40%; width: 250px; z-index: 3; }
+.img3 { top: 120px; left: 20%; width: 250px; z-index: 1; }
+
+.bottomImages {
+  margin-top: 4rem;
+  min-height: 500px;
+}
+
+.img4 { top: 50px; left: 5%; width: 300px; }
+.img5 { top: 0; left: 25%; width: 200px; }
+.img6 { top: 150px; left: 50%; width: 350px; }
+.img7 { top: 100px; left: 75%; width: 150px; }
+
+.contactSection {
+  text-align: center;
+  padding: 4rem 0;
+}

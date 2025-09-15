@@ -32,7 +32,7 @@
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1rem;
   line-height: 1.6;
-  max-width: 60ch;
+  max-width: 50ch;
 }
 
 .buttonGroup {
@@ -240,63 +240,44 @@
 
 .bottomImages {
   position: relative;
-  height: 400px;
+  height: 500px;
   margin-top: 4rem;
 }
 
 .img4 {
-  top: 30px;
-  left: 5%;
-  width: 200px;
-  height: 160px;
+  top: -30px;
+  left: 2%;
+  width: 420px;
+  height: 420px;
+  z-index: 1;
 }
 
-.img4 img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-}
 
 .img5 {
-  top: 0;
-  left: 25%;
-  width: 180px;
-  height: 160px;
+  top: 100px;
+  left: 29%;
+  width: 300px;
+  height: 390px;
+  z-index: 2;
+  transform: rotate(10deg);
 }
 
-.img5 img {
-  width: 160px;
-  height: 120px;
-  object-fit: cover;
-}
 
 .img6 {
-  top: 80px;
-  left: 45%;
-  width: 220px;
-  height: 190px;
+  top: -250px;
+  left: 55%;
+  width: 800px;
+  height: 500px;
+  z-index: 2;
 }
 
-.img6 img {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-}
 
 .img7 {
-  top: 60px;
-  left: 70%;
-  width: 160px;
-  height: 140px;
+  top: -130px;
+  left: 85%;
+  width: 250px;
+  height: 350px;
+  z-index: 3;
+  transform: rotate(2deg);
 }
 
-.img7 img {
-  width: 140px;
-  height: 100px;
-  object-fit: cover;
-}
-
-.contactSection {
-  text-align: center;
-  padding: 4rem 0;
-}

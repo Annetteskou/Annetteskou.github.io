@@ -1,7 +1,7 @@
 /* index.css */
 
 html {
-  background: url("/grid_gray_robot.png") center/cover no-repeat fixed #2d313b;
+  background: url("/images/grid_gray_robot.png") center/cover no-repeat fixed #2d313b;
 }
 
 html, body {

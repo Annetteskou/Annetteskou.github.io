@@ -159,10 +159,6 @@ export default function About() {
         />
       </div>
 
-      <section className={styles.contactSection}>
-        <h2 className={styles.title}>&gt; Kontakt mig</h2>
-        <button className={styles.button}>Kontakt mig her</button>
-      </section>
     </main>
   );
 }

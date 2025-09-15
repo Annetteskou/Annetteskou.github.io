@@ -4,7 +4,7 @@
   --band-gap: clamp(28px, 5vw, 56px); /* afstand fra titel til hver linje */
   min-height: 100dvh;
   padding: 18px var(--pad);
-  background: url("/grid_gray_robot.png") center/cover no-repeat #2d313b;
+  background: url("/images/grid_gray_robot.png") center/cover no-repeat #2d313b;
   color: #eaeaea;
 }
 

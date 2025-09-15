@@ -1,0 +1,158 @@
+/* Footer.module.css */
+
+.footer {
+  background: url("/images/grid_gray_robot.png") center/cover no-repeat #2d313b;
+  border-top: 6px solid;
+  border-image: linear-gradient(90deg, #6ea0dc 0%, #ffffff 100%) 1;
+  padding: 0;
+  margin-top: 4rem;
+}
+
+.contactSection {
+  background: transparent;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #eaeaea;
+  position: relative;
+}
+
+.contactTitle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+.contactButton {
+  background: linear-gradient(90deg, #ffffff 0%, #2563eb 100%);
+  border: 2px solid #2563eb;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.contactButton:hover {
+  background: linear-gradient(90deg, #f8fafc 0%, #1d4ed8 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.contactText {
+  color: #1e293b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.contactContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.contactIcon {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -60px;
+  right: -20px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  background: url("/images/metallic-silver-background-4071-x-2889-8sn9w8p1ueswhtcc.jpg")
+    center/cover no-repeat;
+}
+
+.leftSection {
+  flex: 1;
+}
+
+.footerNav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #2d313b;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #6ea0dc;
+}
+
+.centerSection {
+  flex: 1;
+  text-align: center;
+}
+
+.name {
+  color: #2d313b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.socialIcon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex: none;
+  }
+
+  .footerNav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

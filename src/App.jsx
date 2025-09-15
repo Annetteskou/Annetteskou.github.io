@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import ProjectDetail from "./pages/ProjectDetail";
 import Navigation from "./component/Navigation";
+import Footer from "./component/Footer";
 import Intro from "./pages/Intro";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
           </Routes>
+          <Footer />
         </>
       )}
     </>

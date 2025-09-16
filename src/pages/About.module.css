@@ -72,10 +72,11 @@
   color: #fff;
   text-decoration: none;
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  text-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -87,12 +88,13 @@
 
 /* Skills Container - Glassmorphism */
 .skillsContainer {
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 15px;
   padding: 1.5rem;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  box-shadow: none;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
   margin-top: 3rem;
   margin-right: -100px;
 }
@@ -197,16 +199,18 @@
   transition: transform 0.3s ease-in-out;
   transform-origin: center center;
   cursor: pointer;
-  border: none;
-  outline: none;
-  box-shadow: none;
-  background: none;
+  z-index: 1;
 }
 
-.imageWindow:hover {
+.imageWindow.zoomed {
   transform: scale(1.4);
   z-index: 20;
   box-shadow: none;
+}
+
+.imageWindow:not(.zoomed):hover {
+  transform: scale(1.1);
+  z-index: 2;
 }
 
 .img1 {
@@ -222,7 +226,7 @@
   left: 100px;
   width: 350px;
   height: 260px;
-  z-index: 4;
+  z-index: 8;
 }
 
 .img3 {

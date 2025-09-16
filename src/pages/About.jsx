@@ -1,6 +1,21 @@
+import { useState } from 'react';
 import styles from "./About.module.css";
 
 export default function About() {
+  const [zoomedImg, setZoomedImg] = useState(null);
+
+  const handleImageClick = (imgId) => {
+    // If clicking the same image that's already zoomed, do nothing (it will auto-reset)
+    if (zoomedImg === imgId) return;
+    
+    // Set the new zoomed image
+    setZoomedImg(imgId);
+    
+    // Auto-reset after 2 seconds
+    setTimeout(() => {
+      setZoomedImg(null);
+    }, 2000);
+  };
   return (
     <main className={styles.aboutPage}>
       <div className={styles.gridContainer}>
@@ -50,17 +65,20 @@ export default function About() {
             <img
               src="/images/mig2.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img1}`}
+              className={`${styles.imageWindow} ${styles.img1} ${zoomedImg === 'img1' ? styles.zoomed : ''}`}
+              onClick={() => handleImageClick('img1')}
             />
             <img
               src="/images/miggg.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img2}`}
+              className={`${styles.imageWindow} ${styles.img2} ${zoomedImg === 'img2' ? styles.zoomed : ''}`}
+              onClick={() => handleImageClick('img2')}
             />
             <img
               src="/images/mig1.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img3}`}
+              className={`${styles.imageWindow} ${styles.img3} ${zoomedImg === 'img3' ? styles.zoomed : ''}`}
+              onClick={() => handleImageClick('img3')}
             />
           </div>
 
@@ -140,32 +158,38 @@ export default function About() {
         <img
           src="/images/maleri1.png"
           alt="Maleri 1"
-          className={`${styles.imageWindow} ${styles.img4}`}
+          className={`${styles.imageWindow} ${styles.img4} ${zoomedImg === 'img4' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img4')}
         />
         <img
           src="/images/maleri2.png"
           alt="Maleri 2"
-          className={`${styles.imageWindow} ${styles.img5}`}
+          className={`${styles.imageWindow} ${styles.img5} ${zoomedImg === 'img5' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img5')}
         />
         <img
           src="/images/maleri3.png"
           alt="Maleri 3"
-          className={`${styles.imageWindow} ${styles.img6}`}
+          className={`${styles.imageWindow} ${styles.img6} ${zoomedImg === 'img6' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img6')}
         />
         <img
           src="/images/kamara.png"
           alt="Kamera"
-          className={`${styles.imageWindow} ${styles.img8}`}
+          className={`${styles.imageWindow} ${styles.img8} ${zoomedImg === 'img8' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img8')}
         />
         <img
           src="/images/gameboy.png"
           alt="Game Boy"
-          className={`${styles.imageWindow} ${styles.img7}`}
+          className={`${styles.imageWindow} ${styles.img7} ${zoomedImg === 'img7' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img7')}
         />
         <img
           src="/images/elden.png"
           alt="Elden Ring"
-          className={`${styles.imageWindow} ${styles.img9}`}
+          className={`${styles.imageWindow} ${styles.img9} ${zoomedImg === 'img9' ? styles.zoomed : ''}`}
+          onClick={() => handleImageClick('img9')}
         />
       </div>
     </main>

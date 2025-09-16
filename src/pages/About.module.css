@@ -9,7 +9,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 8rem;
+  margin: 0 auto 8rem;
+  max-width: 1200px;
+  width: 90%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .leftColumn,
@@ -25,11 +29,6 @@
   color: #81ace1;
   font-weight: normal;
   margin-bottom: -10px;
-  max-width: 50ch;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  padding-left: 4rem;
 }
 
 .aboutSection p {
@@ -50,16 +49,20 @@
   font-size: 1.1rem;
   line-height: 1.6;
   max-width: 50ch;
+  margin: 0 auto;
   position: relative;
   z-index: 10;
-  margin: 0 auto;
 }
 
 .buttonGroup {
-  margin-top: 1.5rem;
+  margin: 1.5rem auto 0;
   display: flex;
-  gap: 1rem;
   justify-content: center;
+  gap: 1rem;
+  max-width: 50ch;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .button {
@@ -87,14 +90,12 @@
 .skillsContainer {
   background: rgba(255, 255, 255, 0.01);
   border-radius: 15px;
-  padding: 2.5rem;
+  padding: 1.5rem;
   border: 3px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
-  margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 3rem;
 }
 
 .skillsTitle {
@@ -189,8 +190,7 @@
 .imageWindows {
   position: relative;
   height: 420px;
-  margin-bottom: 3rem;
-  right: 50px;
+  margin-bottom: 2rem;
 }
 
 .imageWindow {
@@ -198,26 +198,26 @@
 }
 
 .img1 {
-  top: 20px;
-  left: 5%;
-  width: 350px;
-  height: 300px;
+  top: 50px;
+  left: 10%;
+  width: 300px;
+  height: 260px;
   z-index: 1;
 }
 
 .img2 {
-  top: 250px;
-  left: 120px;
-  width: 380px;
-  height: 300px;
+  top: 220px;
+  left: 100px;
+  width: 350px;
+  height: 260px;
   z-index: 4;
 }
 
 .img3 {
-  top: 60px;
-  left: 55%;
-  width: 320px;
-  height: 280px;
+  top: 80px;
+  left: 50%;
+  width: 300px;
+  height: 260px;
   z-index: 2;
 }
 

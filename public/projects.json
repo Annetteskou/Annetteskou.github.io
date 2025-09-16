@@ -1,22 +1,50 @@
 [
   {
     "id": 1,
-    "title": "Portfolio Website",
-    "year": 2025,
-    "description": "Mit portfolio bygget med React.",
-    "tags": ["React", "Portfolio", "Frontend"],
-    "image": "/img/portfolio.svg",
+    "title": "Zero Buzz Brew",
+    "year": 2024,
+    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "tags": ["React", "E-commerce", "Frontend"],
+    "image": "/images/zerobuzz.png",
     "links": [
-      { "url": "https://cederdorff.github.io", "text": "React Portfolio" }
+      { "url": "#", "text": "Live Demo" },
+      { "url": "#", "text": "Detaljer" }
     ]
   },
   {
     "id": 2,
-    "title": "Weather App",
+    "title": "Radar",
     "year": 2024,
-    "description": "En lille vejrudsigts-app (demo).",
-    "tags": ["API", "UX"],
-    "image": "/img/weather.svg",
-    "links": [{ "url": "https://example.com", "text": "Demo" }]
+    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "tags": ["Gaming", "UX", "Design"],
+    "image": "/images/radar1.png",
+    "links": [
+      { "url": "#", "text": "Live Demo" },
+      { "url": "#", "text": "Detaljer" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Banken",
+    "year": 2024,
+    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "tags": ["Food", "Restaurant", "Web"],
+    "image": "/images/banken.png",
+    "links": [
+      { "url": "#", "text": "Live Demo" },
+      { "url": "#", "text": "Detaljer" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Steeno Museet",
+    "year": 2024,
+    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "tags": ["Museum", "Interactive", "Quiz"],
+    "image": "/images/steno.png",
+    "links": [
+      { "url": "#", "text": "Live Demo" },
+      { "url": "#", "text": "Detaljer" }
+    ]
   }
 ]

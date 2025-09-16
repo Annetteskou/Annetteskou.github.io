@@ -67,7 +67,14 @@ export default function About() {
           <div className={styles.skillsContainer}>
             <h3 className={styles.skillsTitle}>&gt; Programmer jeg bruger:</h3>
             <div className={styles.skillsGrid}>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/js.png"
                   alt="JavaScript"
@@ -75,7 +82,14 @@ export default function About() {
                 />
                 <span>JAVASKIFT</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/react1.png"
                   alt="React"
@@ -83,7 +97,14 @@ export default function About() {
                 />
                 <span>REACT</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/html1.png"
                   alt="HTML"
@@ -91,7 +112,14 @@ export default function About() {
                 />
                 <span>HTML</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/css1.png"
                   alt="CSS"
@@ -99,7 +127,14 @@ export default function About() {
                 />
                 <span>CSS</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/vite1.png"
                   alt="Vite"
@@ -107,7 +142,14 @@ export default function About() {
                 />
                 <span>VITE</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/figma2.png"
                   alt="Figma"
@@ -115,7 +157,14 @@ export default function About() {
                 />
                 <span>FIGMA</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/ps.png"
                   alt="Photoshop"
@@ -123,7 +172,14 @@ export default function About() {
                 />
                 <span>Photoshop</span>
               </div>
-              <div className={styles.skillItem}>
+              <div 
+                className={styles.skillItem}
+                onMouseEnter={(e) => {
+                  e.currentTarget.setAttribute('data-aos', 'flip-up');
+                  e.currentTarget.setAttribute('data-aos-duration', '800');
+                  e.currentTarget.classList.add('aos-animate');
+                }}
+              >
                 <img
                   src="/images/ai.png"
                   alt="Illustrator"
@@ -158,7 +214,6 @@ export default function About() {
           className={`${styles.imageWindow} ${styles.img7}`}
         />
       </div>
-
     </main>
   );
 }

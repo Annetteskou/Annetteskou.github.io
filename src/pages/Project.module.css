@@ -1,0 +1,199 @@
+/* Project.module.css */
+
+.projectPage {
+  padding: 4rem 1rem 6rem 1rem;
+  color: #eaeaea;
+}
+
+.title {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5rem;
+  color: #6ea0dc;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(110, 160, 220, 0.5);
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 4px;
+  background: linear-gradient(90deg, #6ea0dc 0%, #ffffff 100%);
+  border-radius: 2px;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projectCard {
+  background: url("/images/metallic-silver-background-4071-x-2889-8sn9w8p1ueswhtcc.jpg")
+    center/cover no-repeat;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%);
+}
+
+.projectCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.projectCard:hover::before {
+  left: 100%;
+  opacity: 1;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.projectImage {
+  width: calc(100% - 80px);
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projectContent {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectTitle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.4rem;
+  color: #2d313b;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.projectTitleClose {
+  margin-top: -1rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.projectDescription {
+  color: #2d313b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.demoButton {
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: #0066cc;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: none;
+}
+
+.demoButton:hover {
+  color: #1a4d80;
+  transform: none;
+  box-shadow: none;
+}
+
+.detailButton {
+  background: linear-gradient(135deg, #7bb3f0 0%, #d0d0d0 100%);
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 0.5px black;
+  text-stroke: 0.5px black;
+}
+
+.detailButton:hover {
+  background: linear-gradient(135deg, #6ba0e0 0%, #c0c0c0 100%);
+  transform: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .buttonContainer {
+    flex-direction: column;
+  }
+}

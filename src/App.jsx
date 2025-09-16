@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,6 +8,8 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import Intro from "./pages/Intro";
+import AOS from 'aos';
+import 'https://unpkg.com/aos@2.3.1/dist/aos.css';
 
 function App() {
   const [showIntro, setShowIntro] = useState(() => {
@@ -22,6 +24,15 @@ function App() {
     setShowIntro(false);
     sessionStorage.setItem("introSeen", "true");
   };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100,
+    });
+  }, []);
 
   return (
     <>

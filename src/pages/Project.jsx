@@ -1,6 +1,7 @@
 // src/pages/Project.jsx
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
+import styles from "./Project.module.css";
 
 export default function Project() {
   const [projects, setProjects] = useState([]);
@@ -27,72 +28,64 @@ export default function Project() {
   if (error) return <p style={{ color: "crimson" }}>{error}</p>;
 
   return (
-    <section>
-      <h1>Projects</h1>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-          gap: 16,
-        }}
-      >
+    <main className={styles.projectPage}>
+      <h1 className={styles.title}>&gt; Projekter</h1>
+      <div className={styles.projectGrid}>
         {projects.map((project) => (
-          <article
-            key={project.id}
-            style={{
-              border: "1px solid #eee",
-              borderRadius: 16,
-              overflow: "hidden",
-              display: "flex",
-              flexDirection: "column",
-              background: "#fff",
-            }}
-          >
+          <article key={project.id} className={styles.projectCard}>
             {project.image && (
               <img
                 src={project.image}
                 alt={project.title}
-                style={{
-                  width: "100%",
-                  height: 160,
-                  objectFit: "cover",
-                }}
+                className={styles.projectImage}
               />
             )}
-            <div style={{ padding: "1rem" }}>
-              <h3>{project.title}</h3>
-              <p style={{ color: "#6b7280" }}>{project.year}</p>
-              <p>{project.description}</p>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: 6,
-                  marginBottom: ".75rem",
-                }}
+            <div className={styles.projectContent}>
+              <h3
+                className={`${styles.projectTitle} ${
+                  [
+                    "Radar",
+                    "Steeno Museet",
+                    "Banken",
+                    "Zero Buzz Brew",
+                  ].includes(project.title)
+                    ? styles.projectTitleClose
+                    : ""
+                }`}
               >
-                {project.tags?.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      border: "1px solid #e5e7eb",
-                      padding: ".2rem .5rem",
-                      borderRadius: 999,
-                      fontSize: 12,
-                      background: "#f9fafb",
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                {project.title}
+              </h3>
+              <p className={styles.projectDescription}>{project.description}</p>
 
-              <NavLink to={`/project/${project.id}`}>Se detaljer</NavLink>
+              <div className={styles.projectLinks}>
+                {project.links
+                  ?.sort((a, b) => {
+                    if (a.text === "Live Demo") return -1;
+                    if (b.text === "Live Demo") return 1;
+                    return 0;
+                  })
+                  .map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      className={
+                        link.text === "Live Demo"
+                          ? styles.demoButton
+                          : styles.detailButton
+                      }
+                      target={link.url !== "#" ? "_blank" : undefined}
+                      rel={link.url !== "#" ? "noreferrer" : undefined}
+                    >
+                      {link.text}
+                      {link.text === "Live Demo" && " ↗"}
+                      {link.text === "Detaljer" && " →"}
+                    </a>
+                  ))}
+              </div>
             </div>
           </article>
         ))}
       </div>
-    </section>
+    </main>
   );
 }

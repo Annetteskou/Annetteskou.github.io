@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useParams, Link } from "react-router"
+import { useParams, Link } from "react-router";
+import styles from "./ProjectDetail.module.css";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -31,65 +32,67 @@ export default function ProjectDetail() {
     return projects.find((p) => String(p.id) === String(id));
   }, [projects, id]);
 
-  if (loading) return <p>Indlæser projekt…</p>;
-  if (error) return <p style={{ color: "crimson" }}>{error}</p>;
+  if (loading) return <div className={styles.detailPage}><p className={styles.loadingText}>Indlæser projekt…</p></div>;
+  if (error) return <div className={styles.detailPage}><p className={styles.errorText}>{error}</p></div>;
   if (!project)
     return (
-      <section>
-        <p>Projektet blev ikke fundet.</p>
-        <Link to="/project">Tilbage til Projects</Link>
-      </section>
+      <div className={styles.detailPage}>
+        <div className={styles.notFoundContainer}>
+          <p className={styles.notFoundText}>Projektet blev ikke fundet.</p>
+          <Link to="/project" className={styles.backLink}>Tilbage til Projects</Link>
+        </div>
+      </div>
     );
 
   return (
-    <section style={{ display: "grid", gap: 16 }}>
-      <Link to="/project">← Tilbage</Link>
-      <h1 style={{ marginBottom: 0 }}>{project.title}</h1>
-      <p style={{ color: "#6b7280", marginTop: 0 }}>{project.year}</p>
-      {project.image && (
-        <img
-          src={project.image}
-          alt={project.title}
-          style={{
-            width: "100%",
-            maxHeight: 420,
-            objectFit: "cover",
-            borderRadius: 16,
-          }}
-        />
-      )}
-      <p>{project.description}</p>
+    <div className={styles.detailPage}>
+      <div className={styles.container}>
+        <Link to="/project" className={styles.backLink}>← Tilbage</Link>
+        <h1 className={styles.title}>{project.title}</h1>
+        <p className={styles.year}>{project.year}</p>
+        
+        {project.image && (
+          <img
+            src={project.image}
+            alt={project.title}
+            className={styles.projectImage}
+          />
+        )}
+        
+        <p className={styles.description}>{project.description}</p>
 
-      {project.tags?.length > 0 && (
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              style={{
-                border: "1px solid #e5e7eb",
-                padding: ".25rem .6rem",
-                borderRadius: 999,
-                fontSize: 12,
-                background: "#f9fafb",
-              }}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      )}
+        {project.tags?.length > 0 && (
+          <div className={styles.tagsContainer}>
+            {project.tags.map((tag) => (
+              <span key={tag} className={styles.tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
-      {project.links?.length > 0 && (
-        <ul>
-          {project.links.map((l, i) => (
-            <li key={i}>
-              <a href={l.url} target="_blank" rel="noreferrer">
-                {l.text ?? l.url}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
-    </section>
+        {project.links?.length > 0 && (
+          <div className={styles.linksContainer}>
+            <h3 className={styles.linksTitle}>Links</h3>
+            <ul className={styles.linksList}>
+              {project.links.map((l, i) => (
+                <li key={i} className={styles.linkItem}>
+                  <a 
+                    href={l.url} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className={styles.projectLink}
+                  >
+                    {l.text ?? l.url}
+                    {l.text === "Live Demo" && " ↗"}
+                    {l.text === "Detaljer" && " →"}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

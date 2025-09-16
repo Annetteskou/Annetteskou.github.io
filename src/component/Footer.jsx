@@ -34,7 +34,7 @@ export default function Footer() {
               <img src="/images/LINK.png" alt="LinkedIn" className={styles.socialIcon} />
             </a>
             <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <img src="/images/GITHUB.png" alt="GitHub" className={styles.socialIcon} />
+              <img src="/images/GITHUB.png" alt="GitHub" className={styles.githubIcon} />
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noreferrer">
               <img src="/images/instagram.png" alt="Instagram" className={styles.socialIcon} />

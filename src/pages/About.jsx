@@ -9,9 +9,9 @@ export default function About() {
           <section className={styles.aboutSection}>
             <h2 className={styles.title}>&gt; Om mig</h2>
             <p>
-              &gt; Mit navn er Annette Skou, jeg er 25 år og studere multimediedesign
-              på Erhvervsakademi Aarhus i Viby, hvor jeg har specialiseret mig
-              som frontend developer.
+              &gt; Mit navn er Annette Skou, jeg er 25 år og studere
+              multimediedesign på Erhvervsakademi Aarhus i Viby, hvor jeg har
+              specialiseret mig som frontend developer.
             </p>
             <p>
               &gt; Jeg interesserer mig for at skabe digitale løsninger, der
@@ -36,10 +36,10 @@ export default function About() {
           <section className={styles.hobbiesSection}>
             <h2 className={styles.title}>&gt; Hobbier</h2>
             <p>
-              &gt; Når jeg ikke studerer, bruger jeg min fritid på reformertræning.
-              Jeg elsker at male og dekorere min lejlighed med mine egne værker,
-              og derudover gamer jeg, hvor jeg finder inspiration i digitale
-              universer.
+              &gt; Når jeg ikke studerer, bruger jeg min fritid på
+              reformertræning. Jeg elsker at male og dekorere min lejlighed med
+              mine egne værker, og derudover gamer jeg, hvor jeg finder
+              inspiration i digitale universer.
             </p>
           </section>
         </div>

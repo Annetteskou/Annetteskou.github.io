@@ -72,11 +72,10 @@
   color: #fff;
   text-decoration: none;
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
   cursor: pointer;
   transition: all 0.15s ease;
 }
@@ -88,13 +87,12 @@
 
 /* Skills Container - Glassmorphism */
 .skillsContainer {
-  background: rgba(255, 255, 255, 0.01);
-  border-radius: 15px;
+  background: none;
+  border: none;
   padding: 1.5rem;
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
   margin-top: 3rem;
   margin-right: -100px;
 }
@@ -196,6 +194,19 @@
 
 .imageWindow {
   position: absolute;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: none;
+}
+
+.imageWindow:hover {
+  transform: scale(1.4);
+  z-index: 20;
+  box-shadow: none;
 }
 
 .img1 {

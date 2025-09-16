@@ -9,19 +9,19 @@ export default function About() {
           <section className={styles.aboutSection}>
             <h2 className={styles.title}>&gt; Om mig</h2>
             <p>
-              Mit navn er Annette Skou, jeg er 25 år og studere multimediedesign
+              &gt; Mit navn er Annette Skou, jeg er 25 år og studere multimediedesign
               på Erhvervsakademi Aarhus i Viby, hvor jeg har specialiseret mig
               som frontend developer.
             </p>
             <p>
-              Jeg interesserer mig for at skabe digitale løsninger, der
+              &gt; Jeg interesserer mig for at skabe digitale løsninger, der
               kombinerer funktionalitet med et stærkt visuelt udtryk, og jeg
               elsker at se idéer blive til virkelighed gennem design og kode.
               Jeg er nysgerrig, detaljeorienteret og ambitiøs, og jeg giver
               altid 100 % i de projekter, jeg arbejder med.
             </p>
             <p>
-              Jeg arbejder både selvstændigt og i teams, alt efter hvad
+              &gt; Jeg arbejder både selvstændigt og i teams, alt efter hvad
               projektet kræver, og jeg trives i begge roller. Uanset om det
               handler om at udvikle brugervenlige websites, eksperimentere med
               nye teknologier eller optimere eksisterende løsninger, går jeg
@@ -36,7 +36,7 @@ export default function About() {
           <section className={styles.hobbiesSection}>
             <h2 className={styles.title}>&gt; Hobbier</h2>
             <p>
-              Når jeg ikke studerer, bruger jeg min fritid på reformertræning.
+              &gt; Når jeg ikke studerer, bruger jeg min fritid på reformertræning.
               Jeg elsker at male og dekorere min lejlighed med mine egne værker,
               og derudover gamer jeg, hvor jeg finder inspiration i digitale
               universer.
@@ -67,14 +67,7 @@ export default function About() {
           <div className={styles.skillsContainer}>
             <h3 className={styles.skillsTitle}>&gt; Programmer jeg bruger:</h3>
             <div className={styles.skillsGrid}>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/js.png"
                   alt="JavaScript"
@@ -82,14 +75,7 @@ export default function About() {
                 />
                 <span>JAVASKIFT</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/react1.png"
                   alt="React"
@@ -97,14 +83,7 @@ export default function About() {
                 />
                 <span>REACT</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/html1.png"
                   alt="HTML"
@@ -112,14 +91,7 @@ export default function About() {
                 />
                 <span>HTML</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/css1.png"
                   alt="CSS"
@@ -127,14 +99,7 @@ export default function About() {
                 />
                 <span>CSS</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/vite1.png"
                   alt="Vite"
@@ -142,14 +107,7 @@ export default function About() {
                 />
                 <span>VITE</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/figma2.png"
                   alt="Figma"
@@ -157,14 +115,7 @@ export default function About() {
                 />
                 <span>FIGMA</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/ps.png"
                   alt="Photoshop"
@@ -172,14 +123,7 @@ export default function About() {
                 />
                 <span>Photoshop</span>
               </div>
-              <div 
-                className={styles.skillItem}
-                onMouseEnter={(e) => {
-                  e.currentTarget.setAttribute('data-aos', 'flip-up');
-                  e.currentTarget.setAttribute('data-aos-duration', '800');
-                  e.currentTarget.classList.add('aos-animate');
-                }}
-              >
+              <div className={styles.skillItem}>
                 <img
                   src="/images/ai.png"
                   alt="Illustrator"
@@ -194,24 +138,34 @@ export default function About() {
 
       <div className={styles.bottomImages}>
         <img
-          src="/images/maleri.png"
-          alt="Hobby"
+          src="/images/maleri1.png"
+          alt="Maleri 1"
           className={`${styles.imageWindow} ${styles.img4}`}
         />
         <img
-          src="/images/kamara.png"
-          alt="Hobby"
+          src="/images/maleri2.png"
+          alt="Maleri 2"
           className={`${styles.imageWindow} ${styles.img5}`}
+        />
+        <img
+          src="/images/maleri3.png"
+          alt="Maleri 3"
+          className={`${styles.imageWindow} ${styles.img6}`}
+        />
+        <img
+          src="/images/kamara.png"
+          alt="Kamera"
+          className={`${styles.imageWindow} ${styles.img8}`}
+        />
+        <img
+          src="/images/gameboy.png"
+          alt="Game Boy"
+          className={`${styles.imageWindow} ${styles.img7}`}
         />
         <img
           src="/images/elden.png"
           alt="Elden Ring"
-          className={`${styles.imageWindow} ${styles.img6}`}
-        />
-        <img
-          src="/images/phone.png"
-          alt="Phone"
-          className={`${styles.imageWindow} ${styles.img7}`}
+          className={`${styles.imageWindow} ${styles.img9}`}
         />
       </div>
     </main>

@@ -1,14 +1,16 @@
 /* index.css */
 
 html {
-  background: url("/images/grid_gray_robot.png") center/cover no-repeat fixed #2d313b;
+  background: url("/images/grid_gray_robot.png") center/cover no-repeat fixed
+    #2d313b;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   line-height: 1.5;
   width: 100%;
   overflow-x: hidden;
@@ -30,4 +32,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-

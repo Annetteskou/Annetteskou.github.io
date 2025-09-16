@@ -9,7 +9,7 @@ import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import Intro from "./pages/Intro";
 import AOS from 'aos';
-import 'https://unpkg.com/aos@2.3.1/dist/aos.css';
+import 'aos/dist/aos.css';
 
 function App() {
   const [showIntro, setShowIntro] = useState(() => {

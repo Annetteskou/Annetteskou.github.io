@@ -154,13 +154,17 @@
 }
 
 .demoButton:hover {
-  color: #1a4d80;
+  color: #4a7ba7;
   transform: none;
   box-shadow: none;
 }
 
+.demoButton:active {
+  color: #4a7ba7;
+}
+
 .detailButton {
-  background: linear-gradient(135deg, #7bb3f0 0%, #d0d0d0 100%);
+  background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   border: 1px solid black;
   border-radius: 12px;
   padding: 0.6rem 1.2rem;
@@ -180,9 +184,14 @@
 }
 
 .detailButton:hover {
-  background: linear-gradient(135deg, #6ba0e0 0%, #c0c0c0 100%);
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.detailButton:active {
+  background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive design */

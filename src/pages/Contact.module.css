@@ -68,10 +68,10 @@
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 16px;
   padding: 2rem;
-  backdrop-filter: blur(1px);
   position: relative;
   width: 520px;
   max-width: 92vw;
+  backdrop-filter: blur(1px);
 }
 
 /* formPanel intentionally inherits panel sizing and spacing */
@@ -196,6 +196,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: all 0.15s ease;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .decor {

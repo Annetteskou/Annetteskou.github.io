@@ -42,7 +42,7 @@
 }
 
 .contactButton:hover {
-  background: linear-gradient(135deg, #4a5f8a 0%, #d0d0d0 100%);
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
@@ -78,8 +78,7 @@
   width: 100%;
   margin-top: 0;
   padding: 0.75rem 2rem;
-  background: url("/images/metallic-silver-background-4071-x-2889-8sn9w8p1ueswhtcc.jpg")
-    center/cover no-repeat;
+  background: transparent;
 }
 
 .leftSection {

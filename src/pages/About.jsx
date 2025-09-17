@@ -76,10 +76,7 @@ export default function About() {
             <img
               src="/images/mig2.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img1} ${
-                zoomedImg === "img1" ? styles.zoomed : ""
-              } ${styles.floatingImage}`}
-              onClick={() => handleImageClick("img1")}
+              className={`${styles.imageWindow} ${styles.img1} ${styles.floatingImage}`}
               style={{
                 animationDelay: "0s",
                 transform: `rotate(-3deg) translateY(${
@@ -90,10 +87,7 @@ export default function About() {
             <img
               src="/images/miggg.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img2} ${
-                zoomedImg === "img2" ? styles.zoomed : ""
-              } ${styles.floatingImage}`}
-              onClick={() => handleImageClick("img2")}
+              className={`${styles.imageWindow} ${styles.img2} ${styles.floatingImage}`}
               style={{
                 animationDelay: "0.3s",
                 transform: `rotate(2deg) translateY(${
@@ -106,10 +100,7 @@ export default function About() {
             <img
               src="/images/mig1.png"
               alt="Annette Skou"
-              className={`${styles.imageWindow} ${styles.img3} ${
-                zoomedImg === "img3" ? styles.zoomed : ""
-              } ${styles.floatingImage}`}
-              onClick={() => handleImageClick("img3")}
+              className={`${styles.imageWindow} ${styles.img3} ${styles.floatingImage}`}
               style={{
                 animationDelay: "0.6s",
                 transform: `rotate(-1deg) translateY(${
@@ -220,26 +211,17 @@ export default function About() {
         <img
           src="/images/pilates.png"
           alt="Pilates"
-          className={`${styles.imageWindow} ${styles.img8} ${
-            zoomedImg === "img8" ? styles.zoomed : ""
-          }`}
-          onClick={() => handleImageClick("img8")}
+          className={`${styles.imageWindow} ${styles.img8}`}
         />
         <img
           src="/images/gameboy.png"
           alt="Game Boy"
-          className={`${styles.imageWindow} ${styles.img7} ${
-            zoomedImg === "img7" ? styles.zoomed : ""
-          }`}
-          onClick={() => handleImageClick("img7")}
+          className={`${styles.imageWindow} ${styles.img7}`}
         />
         <img
           src="/images/elden.png"
           alt="Elden Ring"
-          className={`${styles.imageWindow} ${styles.img9} ${
-            zoomedImg === "img9" ? styles.zoomed : ""
-          }`}
-          onClick={() => handleImageClick("img9")}
+          className={`${styles.imageWindow} ${styles.img9}`}
         />
       </div>
     </main>

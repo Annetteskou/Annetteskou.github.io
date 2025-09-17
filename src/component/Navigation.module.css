@@ -44,8 +44,15 @@
 }
 
 .link:hover {
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: translateY(-2px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.link:active {
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
+  transform: translateY(0px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .active {

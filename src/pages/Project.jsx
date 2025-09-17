@@ -1,6 +1,6 @@
 // src/pages/Project.jsx
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink, Link } from "react-router";
 import styles from "./Project.module.css";
 import FloatingLights from "../component/FloatingLights";
 
@@ -66,23 +66,31 @@ export default function Project() {
                     if (b.text === "Live Demo") return 1;
                     return 0;
                   })
-                  .map((link, index) => (
-                    <a
-                      key={index}
-                      href={link.url}
-                      className={
-                        link.text === "Live Demo"
-                          ? styles.demoButton
-                          : styles.detailButton
-                      }
-                      target={link.url !== "#" ? "_blank" : undefined}
-                      rel={link.url !== "#" ? "noreferrer" : undefined}
-                    >
-                      {link.text}
-                      {link.text === "Live Demo" && " ↗"}
-                      {link.text === "Detaljer" && " →"}
-                    </a>
-                  ))}
+                  .map((link, index) => {
+                    if (link.text === "Detaljer") {
+                      return (
+                        <Link
+                          key={index}
+                          to={`/project/${project.id}`}
+                          className={styles.detailButton}
+                        >
+                          {link.text} →
+                        </Link>
+                      );
+                    } else {
+                      return (
+                        <a
+                          key={index}
+                          href={link.url}
+                          className={styles.demoButton}
+                          target={link.url !== "#" ? "_blank" : undefined}
+                          rel={link.url !== "#" ? "noreferrer" : undefined}
+                        >
+                          {link.text} ↗
+                        </a>
+                      );
+                    }
+                  })}
               </div>
             </div>
           </article>

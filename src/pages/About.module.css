@@ -86,8 +86,15 @@
 }
 
 .button:hover {
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.button:active {
+  background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
+  transform: translateY(0px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Skills Container - Glassmorphism */
@@ -200,17 +207,17 @@
 
 .imageWindow {
   position: absolute;
-  transition: none;
+  transition: all 0.3s ease;
   transform-origin: center center;
-  cursor: default;
+  cursor: pointer;
   z-index: 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .imageWindow.zoomed {
-  transform: none;
-  z-index: 0;
-  box-shadow: none;
+  transform: scale(1.2);
+  z-index: 10;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .imageWindow:not(.zoomed):hover {
@@ -320,6 +327,15 @@
   width: 250px;
   z-index: 0;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover zoom effect only for maleri images */
+.img4:hover,
+.img5:hover,
+.img6:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  transition: all 0.3s ease;
 }
 
 .img7 {

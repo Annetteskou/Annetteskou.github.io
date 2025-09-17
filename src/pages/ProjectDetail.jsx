@@ -32,14 +32,26 @@ export default function ProjectDetail() {
     return projects.find((p) => String(p.id) === String(id));
   }, [projects, id]);
 
-  if (loading) return <div className={styles.detailPage}><p className={styles.loadingText}>Indlæser projekt…</p></div>;
-  if (error) return <div className={styles.detailPage}><p className={styles.errorText}>{error}</p></div>;
+  if (loading)
+    return (
+      <div className={styles.detailPage}>
+        <p className={styles.loadingText}>Indlæser projekt…</p>
+      </div>
+    );
+  if (error)
+    return (
+      <div className={styles.detailPage}>
+        <p className={styles.errorText}>{error}</p>
+      </div>
+    );
   if (!project)
     return (
       <div className={styles.detailPage}>
         <div className={styles.notFoundContainer}>
           <p className={styles.notFoundText}>Projektet blev ikke fundet.</p>
-          <Link to="/project" className={styles.backLink}>Tilbage til Projects</Link>
+          <Link to="/project" className={styles.backLink}>
+            Tilbage til Projects
+          </Link>
         </div>
       </div>
     );
@@ -47,10 +59,12 @@ export default function ProjectDetail() {
   return (
     <div className={styles.detailPage}>
       <div className={styles.container}>
-        <Link to="/project" className={styles.backLink}>← Tilbage</Link>
+        <Link to="/project" className={styles.backLink}>
+          ← Tilbage
+        </Link>
         <h1 className={styles.title}>{project.title}</h1>
         <p className={styles.year}>{project.year}</p>
-        
+
         {project.image && (
           <img
             src={project.image}
@@ -58,7 +72,7 @@ export default function ProjectDetail() {
             className={styles.projectImage}
           />
         )}
-        
+
         <p className={styles.description}>{project.description}</p>
 
         {project.tags?.length > 0 && (
@@ -77,9 +91,9 @@ export default function ProjectDetail() {
             <ul className={styles.linksList}>
               {project.links.map((l, i) => (
                 <li key={i} className={styles.linkItem}>
-                  <a 
-                    href={l.url} 
-                    target="_blank" 
+                  <a
+                    href={l.url}
+                    target="_blank"
                     rel="noreferrer"
                     className={styles.projectLink}
                   >

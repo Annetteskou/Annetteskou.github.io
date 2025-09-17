@@ -5,6 +5,7 @@
   font-family: "Courier New", monospace;
   color: #000;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -13,6 +14,7 @@
   padding: 1rem 1.5rem 3rem 1.5rem;
   position: relative;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .headerRow {

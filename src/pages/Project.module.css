@@ -3,6 +3,8 @@
 .projectPage {
   padding: 4rem 1rem 6rem 1rem;
   color: #eaeaea;
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
@@ -14,6 +16,7 @@
   font-weight: bold;
   text-shadow: 0 0 10px rgba(110, 160, 220, 0.5);
   position: relative;
+  z-index: 1;
 }
 
 .title::after {
@@ -53,7 +56,7 @@
 }
 
 .projectCard::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import styles from "./Project.module.css";
+import FloatingLights from "../component/FloatingLights";
 
 export default function Project() {
   const [projects, setProjects] = useState([]);
@@ -29,6 +30,7 @@ export default function Project() {
 
   return (
     <main className={styles.projectPage}>
+      <FloatingLights />
       <h1 className={styles.title}>&gt; Projekter</h1>
       <div className={styles.projectGrid}>
         {projects.map((project) => (

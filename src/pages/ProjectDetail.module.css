@@ -6,6 +6,8 @@
   min-height: 100vh;
   padding: 4rem 2rem 6rem;
   color: #eaeaea;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
@@ -13,6 +15,8 @@
   margin: 0 auto;
   display: grid;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .backLink {

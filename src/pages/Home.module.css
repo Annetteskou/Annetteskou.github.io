@@ -6,6 +6,8 @@
   padding: 18px var(--pad);
   background: url("/images/grid_gray_robot.png") center/cover no-repeat #2d313b;
   color: #eaeaea;
+  position: relative;
+  overflow: hidden;
 }
 
 /* ========= LINJER ========= */
@@ -46,6 +48,8 @@
   gap: clamp(5px, 1vw, 10px);
   align-items: start;
   margin-top: clamp(8px, 2vw, 16px);
+  position: relative;
+  z-index: 1;
 }
 
 /* ----- Række 1 ----- */
@@ -75,7 +79,7 @@
   max-width: none;
   white-space: nowrap;
   font-family: "Courier New", Courier, monospace;
-  color:#6ea0dc;
+  color: #6ea0dc;
   font-size: clamp(24px, 3.5vw, 32px);
   line-height: 1.3;
   margin-right: 100px;
@@ -253,7 +257,6 @@
   height: auto;
   border-radius: 0;
 }
-
 
 /* ========= RESPONSIV ========= */
 @media (max-width: 1200px) {

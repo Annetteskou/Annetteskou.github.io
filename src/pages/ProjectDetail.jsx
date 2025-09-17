@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Link } from "react-router";
 import styles from "./ProjectDetail.module.css";
+import FloatingLights from "../component/FloatingLights";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -58,6 +59,7 @@ export default function ProjectDetail() {
 
   return (
     <div className={styles.detailPage}>
+      <FloatingLights />
       <div className={styles.container}>
         <Link to="/project" className={styles.backLink}>
           ← Tilbage

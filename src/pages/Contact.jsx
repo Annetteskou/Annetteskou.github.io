@@ -1,8 +1,10 @@
 import styles from "./Contact.module.css";
+import FloatingLights from "../component/FloatingLights";
 
 export default function Contact() {
   return (
     <main className={styles.contactPage}>
+      <FloatingLights />
       <div className={styles.container}>
         <div className={styles.headerRow}>
           <h1 className={styles.title}>&gt; Kontakt</h1>

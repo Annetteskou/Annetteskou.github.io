@@ -1,16 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import styles from "./About.module.css";
+import FloatingLights from "../component/FloatingLights";
 
 export default function About() {
   const [zoomedImg, setZoomedImg] = useState(null);
   const navigate = useNavigate();
-
-  const maleriImages = [
-    { src: "/images/maleri1.png", alt: "Maleri 1" },
-    { src: "/images/maleri2.png", alt: "Maleri 2" },
-    { src: "/images/maleri3.png", alt: "Maleri 3" },
-  ];
 
   const handleImageClick = (imgId) => {
     // If clicking the same image that's already zoomed, do nothing (it will auto-reset)
@@ -24,131 +19,10 @@ export default function About() {
       setZoomedImg(null);
     }, 2000);
   };
+
   return (
     <main className={styles.aboutPage}>
-      {/* Floating Background Lights */}
-      <div className={styles.floatingLights}>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "0s",
-            "--duration": "8s",
-            "--x": "10%",
-            "--y": "20%",
-            "--color": "rgba(102, 126, 234, 0.08)",
-            "--color2": "rgba(102, 126, 234, 0.03)",
-            "--color3": "rgba(102, 126, 234, 0.12)",
-            "--color4": "rgba(102, 126, 234, 0.06)",
-            "--color5": "rgba(102, 126, 234, 0.2)",
-            "--color6": "rgba(102, 126, 234, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "2s",
-            "--duration": "12s",
-            "--x": "80%",
-            "--y": "15%",
-            "--color": "rgba(59, 130, 246, 0.08)",
-            "--color2": "rgba(59, 130, 246, 0.03)",
-            "--color3": "rgba(59, 130, 246, 0.12)",
-            "--color4": "rgba(59, 130, 246, 0.06)",
-            "--color5": "rgba(59, 130, 246, 0.2)",
-            "--color6": "rgba(59, 130, 246, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "4s",
-            "--duration": "10s",
-            "--x": "20%",
-            "--y": "70%",
-            "--color": "rgba(37, 99, 235, 0.08)",
-            "--color2": "rgba(37, 99, 235, 0.03)",
-            "--color3": "rgba(37, 99, 235, 0.12)",
-            "--color4": "rgba(37, 99, 235, 0.06)",
-            "--color5": "rgba(37, 99, 235, 0.2)",
-            "--color6": "rgba(37, 99, 235, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "1s",
-            "--duration": "14s",
-            "--x": "70%",
-            "--y": "60%",
-            "--color": "rgba(29, 78, 216, 0.08)",
-            "--color2": "rgba(29, 78, 216, 0.03)",
-            "--color3": "rgba(29, 78, 216, 0.12)",
-            "--color4": "rgba(29, 78, 216, 0.06)",
-            "--color5": "rgba(29, 78, 216, 0.2)",
-            "--color6": "rgba(29, 78, 216, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "3s",
-            "--duration": "9s",
-            "--x": "50%",
-            "--y": "40%",
-            "--color": "rgba(147, 197, 253, 0.08)",
-            "--color2": "rgba(147, 197, 253, 0.03)",
-            "--color3": "rgba(147, 197, 253, 0.12)",
-            "--color4": "rgba(147, 197, 253, 0.06)",
-            "--color5": "rgba(147, 197, 253, 0.2)",
-            "--color6": "rgba(147, 197, 253, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "5s",
-            "--duration": "11s",
-            "--x": "90%",
-            "--y": "80%",
-            "--color": "rgba(96, 165, 250, 0.08)",
-            "--color2": "rgba(96, 165, 250, 0.03)",
-            "--color3": "rgba(96, 165, 250, 0.12)",
-            "--color4": "rgba(96, 165, 250, 0.06)",
-            "--color5": "rgba(96, 165, 250, 0.2)",
-            "--color6": "rgba(96, 165, 250, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "1.5s",
-            "--duration": "13s",
-            "--x": "5%",
-            "--y": "50%",
-            "--color": "rgba(59, 130, 246, 0.08)",
-            "--color2": "rgba(59, 130, 246, 0.03)",
-            "--color3": "rgba(59, 130, 246, 0.12)",
-            "--color4": "rgba(59, 130, 246, 0.06)",
-            "--color5": "rgba(59, 130, 246, 0.2)",
-            "--color6": "rgba(59, 130, 246, 0.08)",
-          }}
-        ></div>
-        <div
-          className={styles.lightOrb}
-          style={{
-            "--delay": "3.5s",
-            "--duration": "7s",
-            "--x": "60%",
-            "--y": "10%",
-            "--color": "rgba(37, 99, 235, 0.08)",
-            "--color2": "rgba(37, 99, 235, 0.03)",
-            "--color3": "rgba(37, 99, 235, 0.12)",
-            "--color4": "rgba(37, 99, 235, 0.06)",
-            "--color5": "rgba(37, 99, 235, 0.2)",
-            "--color6": "rgba(37, 99, 235, 0.08)",
-          }}
-        ></div>
-      </div>
+      <FloatingLights />
 
       <div className={styles.gridContainer}>
         {/* Left Column */}
@@ -225,6 +99,8 @@ export default function About() {
                 transform: `rotate(2deg) translateY(${
                   Math.sin(Date.now() / 1000 + 0.3) * 8
                 }px)`,
+                zIndex: 9999,
+                position: "relative",
               }}
             />
             <img
@@ -316,65 +192,54 @@ export default function About() {
       </div>
 
       <div className={styles.bottomImages}>
-        {/* Floating Maleri Gallery */}
-        {maleriImages.map((image, index) => (
-          <img
-            key={index}
-            src={image.src}
-            alt={image.alt}
-            className={`${styles.imageWindow} ${styles[`img${index + 4}`]} ${
-              zoomedImg === `img${index + 4}` ? styles.zoomed : ""
-            } ${styles.floatingMaleri}`}
-            onClick={() => handleImageClick(`img${index + 4}`)}
-            style={{
-              animationDelay: `${index * 0.5}s`,
-              transform: `rotate(${index * 5 - 5}deg) translateY(${
-                Math.sin(Date.now() / 1000 + index) * 10
-              }px)`,
-            }}
-          />
-        ))}
+        {/* Maleri Images */}
+        <img
+          src="/images/maleri1.png"
+          alt="Maleri 1"
+          className={`${styles.imageWindow} ${styles.img4} ${
+            zoomedImg === "img4" ? styles.zoomed : ""
+          }`}
+          onClick={() => handleImageClick("img4")}
+        />
+        <img
+          src="/images/maleri2.png"
+          alt="Maleri 2"
+          className={`${styles.imageWindow} ${styles.img5} ${
+            zoomedImg === "img5" ? styles.zoomed : ""
+          }`}
+          onClick={() => handleImageClick("img5")}
+        />
+        <img
+          src="/images/maleri3.png"
+          alt="Maleri 3"
+          className={`${styles.imageWindow} ${styles.img6} ${
+            zoomedImg === "img6" ? styles.zoomed : ""
+          }`}
+          onClick={() => handleImageClick("img6")}
+        />
         <img
           src="/images/pilates.png"
           alt="Pilates"
           className={`${styles.imageWindow} ${styles.img8} ${
             zoomedImg === "img8" ? styles.zoomed : ""
-          } ${styles.floatingImage}`}
+          }`}
           onClick={() => handleImageClick("img8")}
-          style={{
-            animationDelay: "1.5s",
-            transform: `rotate(4deg) translateY(${
-              Math.sin(Date.now() / 1000 + 1.5) * 8
-            }px)`,
-          }}
         />
         <img
           src="/images/gameboy.png"
           alt="Game Boy"
           className={`${styles.imageWindow} ${styles.img7} ${
             zoomedImg === "img7" ? styles.zoomed : ""
-          } ${styles.floatingImage}`}
+          }`}
           onClick={() => handleImageClick("img7")}
-          style={{
-            animationDelay: "1.8s",
-            transform: `rotate(-2deg) translateY(${
-              Math.sin(Date.now() / 1000 + 1.8) * 8
-            }px)`,
-          }}
         />
         <img
           src="/images/elden.png"
           alt="Elden Ring"
           className={`${styles.imageWindow} ${styles.img9} ${
             zoomedImg === "img9" ? styles.zoomed : ""
-          } ${styles.floatingImage}`}
+          }`}
           onClick={() => handleImageClick("img9")}
-          style={{
-            animationDelay: "2.1s",
-            transform: `rotate(3deg) translateY(${
-              Math.sin(Date.now() / 1000 + 2.1) * 8
-            }px)`,
-          }}
         />
       </div>
     </main>

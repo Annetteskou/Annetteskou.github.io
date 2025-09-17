@@ -1,9 +1,11 @@
 import { NavLink } from "react-router";
 import styles from "./Home.module.css";
+import FloatingLights from "../component/FloatingLights";
 
 export default function Home() {
   return (
     <main className={styles.home}>
+      <FloatingLights />
 
       {/* Øverste linje (kant-til-kant) */}
       <div className={`${styles.rule} ${styles.ruleTop}`} />
@@ -43,9 +45,7 @@ export default function Home() {
                 <span className={styles.lastName}>Skou</span>
               </span>
             </div>
-            <div className={styles.codeSymbol}>
-              &lt;/&gt;
-            </div>
+            <div className={styles.codeSymbol}>&lt;/&gt;</div>
           </div>
 
           <div className={styles.socials}>

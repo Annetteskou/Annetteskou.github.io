@@ -209,7 +209,9 @@ export default function ProjectDetail() {
           </div>
 
           <div className={styles.keyFeaturesSection}>
-            <div className={styles.sectionTitle}>★ Key Features</div>
+            <div className={styles.sectionTitle}>
+              <span className={styles.starIcon}>★</span> Key Features
+            </div>
             <ul className={styles.featuresList}>
               {content.features.map((feature, index) => (
                 <li key={index}>{feature}</li>

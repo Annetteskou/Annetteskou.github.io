@@ -8,8 +8,8 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import Intro from "./pages/Intro";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [showIntro, setShowIntro] = useState(() => {
@@ -19,6 +19,8 @@ function App() {
 
   const location = useLocation();
   const showNav = true; // Always show navigation
+  const hideFooter =
+    location.pathname === "/" || location.pathname === "/contact";
 
   const handleIntroFinish = () => {
     setShowIntro(false);
@@ -28,7 +30,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      easing: 'ease-in-out',
+      easing: "ease-in-out",
       once: true,
       offset: 100,
     });
@@ -47,7 +49,7 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/project/:id" element={<ProjectDetail />} />
           </Routes>
-          <Footer />
+          {!hideFooter && <Footer />}
         </>
       )}
     </>

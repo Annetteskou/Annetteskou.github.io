@@ -134,8 +134,8 @@ export default function ProjectDetail() {
           ],
           screenshots: [
             "/images/steno1.png",
-            "/images/steno2.png",
-            "/images/steno3.png",
+            "/images/steeno2.png",
+            "/images/steeno3.png",
           ],
           errorImage: "/images/error.png",
           liveDemoUrl: "https://angst-steno-eksamen.axelriis.dk/index.html",

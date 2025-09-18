@@ -78,7 +78,8 @@
   width: 100%;
   margin-top: 0;
   padding: 0.75rem 2rem;
-  background: transparent;
+  background: url("/images/metallic-silver-background-4071-x-2889-8sn9w8p1ueswhtcc.jpg")
+    center/cover no-repeat;
 }
 
 .leftSection {

@@ -49,7 +49,11 @@ export default function Home() {
           </div>
 
           <div className={styles.socials}>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/Annetteskou"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="/images/GITHUB.png"
                 alt="GitHub"

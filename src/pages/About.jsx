@@ -20,6 +20,16 @@ export default function About() {
     }, 2000);
   };
 
+  const handleDownloadCV = () => {
+    // Create a link element to trigger download
+    const link = document.createElement("a");
+    link.href = "/CV- Annette Skou.pdf"; // Path to your CV file
+    link.download = "CV- Annette Skou.pdf"; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <main className={styles.aboutPage}>
       <FloatingLights />
@@ -49,7 +59,9 @@ export default function About() {
               altid all in.
             </p>
             <div className={styles.buttonGroup}>
-              <button className={styles.button}>Download CV</button>
+              <button className={styles.button} onClick={handleDownloadCV}>
+                Download CV
+              </button>
               <button
                 className={styles.button}
                 onClick={() => navigate("/project")}

@@ -214,10 +214,17 @@
 
 .sideCharacter {
   position: absolute;
-  right: -150px;
-  bottom: 0px;
-  width: 240px;
-  pointer-events: none;
+  right: -50px;
+  bottom: 50px;
+  width: 140px;
+  transform: rotate(15deg);
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sideCharacter:hover {
+  transform: rotate(25deg) scale(1.1);
 }
 
 .socialLink {

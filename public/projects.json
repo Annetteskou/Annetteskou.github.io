@@ -3,11 +3,11 @@
     "id": 1,
     "title": "Zero Buzz Brew",
     "year": 2024,
-    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "description": "Et digitalt koncept der skaber alkoholfri fællesskaber og events for unge...",
     "tags": ["React", "E-commerce", "Frontend"],
     "image": "/images/zerobuzz.png",
     "links": [
-      { "url": "#", "text": "Live Demo" },
+      { "url": "https://zerobuzzbrew.axelriis.dk", "text": "Live Demo" },
       { "url": "#", "text": "Detaljer" }
     ]
   },
@@ -15,11 +15,14 @@
     "id": 2,
     "title": "Radar",
     "year": 2024,
-    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "description": "Eksamensprojekt - Udvikling af en alternativ hjemmeside for spillestedet Radar i Aarhus...",
     "tags": ["Gaming", "UX", "Design"],
     "image": "/images/radar.png",
     "links": [
-      { "url": "#", "text": "Live Demo" },
+      {
+        "url": "https://radar.where-music-matters.annetteskou.dk/donation.html",
+        "text": "Live Demo"
+      },
       { "url": "#", "text": "Detaljer" }
     ]
   },
@@ -27,23 +30,29 @@
     "id": 3,
     "title": "Banken",
     "year": 2024,
-    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "description": "En moderne restaurant hjemmeside med fokus på brugervenlighed og æstetik...",
     "tags": ["Food", "Restaurant", "Web"],
     "image": "/images/banken.png",
     "links": [
-      { "url": "#", "text": "Live Demo" },
+      {
+        "url": "https://responsiv.cilletalbot.dk/index.html",
+        "text": "Live Demo"
+      },
       { "url": "#", "text": "Detaljer" }
     ]
   },
   {
     "id": 4,
-    "title": "Steeno Museet",
+    "title": "Steno Museet",
     "year": 2024,
-    "description": "riingnolbn kjfng sn kv nv vinfd ixoblnekdng x nb kfnbdlkgpdnbokmo",
+    "description": "Interaktiv digital løsning til Steno Museets udstilling om angst for børn...",
     "tags": ["Museum", "Interactive", "Quiz"],
     "image": "/images/stenomuseet.png",
     "links": [
-      { "url": "#", "text": "Live Demo" },
+      {
+        "url": "https://angst-steno-eksamen.axelriis.dk/index.html",
+        "text": "Live Demo"
+      },
       { "url": "#", "text": "Detaljer" }
     ]
   }

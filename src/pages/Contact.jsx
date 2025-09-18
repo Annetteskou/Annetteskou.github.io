@@ -128,7 +128,7 @@ export default function Contact() {
         </section>
         <img
           className={styles.sideCharacter}
-          src="/images/anicross.png"
+          src="/images/mobil.png"
           alt="Figur"
         />
       </div>

@@ -47,7 +47,7 @@ export default function Project() {
                 className={`${styles.projectTitle} ${
                   [
                     "Radar",
-                    "Steeno Museet",
+                    "Steno Museet",
                     "Banken",
                     "Zero Buzz Brew",
                   ].includes(project.title)

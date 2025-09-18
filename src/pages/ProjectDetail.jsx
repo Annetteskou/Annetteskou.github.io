@@ -37,10 +37,12 @@ export default function ProjectDetail() {
             "Vi arbejdede med brugerundersøgelser, idéudvikling og prototyping for at finde frem til et design, som formidler Zero Buzz' værdier på en moderne og inkluderende måde. Resultatet blev en responsiv prototype med friske farver, klare budskaber og en intuitiv brugeroplevelse, der understøtter budskabet om, at fællesskab og sjov ikke behøver at afhænge af alkohol.",
           ],
           technologies: [
-            { name: "React", icon: "/images/react1.png" },
-            { name: "JavaScript", icon: "/images/js.png" },
-            { name: "CSS3", icon: "/images/css1.png" },
+            { name: "Photoshop", icon: "/images/ps.png" },
+            { name: "Illustrator", icon: "/images/ai.png" },
+            { name: "Figma", icon: "/images/figma2.png" },
             { name: "HTML5", icon: "/images/html1.png" },
+            { name: "CSS3", icon: "/images/css1.png" },
+            { name: "JavaScript", icon: "/images/js.png" },
           ],
           features: [
             "Responsivt design der fungerer på alle enheder",
@@ -54,13 +56,14 @@ export default function ProjectDetail() {
             "/images/zerobuzz3.png",
             "/images/zerobuzz4.png",
           ],
+          liveDemoUrl: "https://zerobuzzbrew.axelriis.dk",
         };
       case "2": // Radar
         return {
           description: [
-            "Radar Eksamensprojekt - Udvikling af en alternativ hjemmeside for spillestedet Radar i Aarhus. Projektet fokuserer på at skabe et moderne og brugervenligt supplement til den eksisterende platform.",
-            "Processen involverede omfattende research, design og kodning i HTML og CSS for at skabe en responsiv og funktionel hjemmeside. Målet var at fremhæve Radars støtte, frivillighed og workshops på en enkel og engagerende måde.",
-            "Projektet demonstrerer kompetencer inden for webudvikling, UX/UI design og implementering af moderne web teknologier for at skabe en optimal brugeroplevelse.",
+            "I dette projekt udviklede jeg en alternativ hjemmeside til spillestedet Radar i Aarhus som et moderne og brugervenligt supplement til deres eksisterende platform.",
+            "Arbejdet omfattede både research, design og kodning i HTML og CSS med fokus på at skabe en responsiv og funktionel løsning. Hjemmesiden er designet til at understøtte Radars profil og værdier, særligt deres engagement i støtte, frivillighed og workshops, præsenteret på en enkel og overskuelig måde.",
+            "Projektet viser mine færdigheder inden for webudvikling, UX/UI-design og anvendelsen af moderne webteknologier med henblik på at levere en stærk og optimal brugeroplevelse.",
           ],
           technologies: [
             { name: "HTML", icon: "/images/html1.png" },
@@ -78,54 +81,64 @@ export default function ProjectDetail() {
             "/images/radar2.png",
             "/images/radar3.png",
           ],
+          liveDemoUrl:
+            "https://radar.where-music-matters.annetteskou.dk/donation.html",
         };
       case "3": // Banken
         return {
           description: [
-            "Banken er en moderne restaurant website der kombinerer elegant design med funktionalitet. Projektet fokuserer på at præsentere restaurantens menu og atmosfære på en tiltalende måde.",
-            "Website'en tilbyder en omfattende oversigt over restaurantens tilbud, inklusive menu, åbningstider, lokation og booking funktionalitet. Designet er inspireret af moderne restaurant branding med fokus på visuel appel.",
-            "Projektet implementerer moderne web design trends og sikrer en optimal brugeroplevelse på tværs af alle enheder.",
+            "Dette projekt har haft fokus på at udvikle et website, der udforsker Responsive Web Design-strategien.",
+            "Som case valgte vi en dansk virksomhed, og vores mål var at skabe en digital løsning, der tilpasser sig forskellige skærmstørrelser og brugssituationer.",
+            "I processen arbejdede vi med brugerundersøgelser, analyse af virksomhedens visuelle identitet og udvikling af content til målgruppen. På baggrund af vores research udviklede vi moodboards, mockups og prototyper, inden vi implementerede den endelige løsning i HTML, CSS og JavaScript.",
+            "Resultatet blev et responsivt og brugervenligt website, der giver en ensartet og professionel oplevelse på mobil, tablet og desktop ved banken.",
           ],
           technologies: [
-            { name: "React", icon: "/images/react1.png" },
-            { name: "JavaScript", icon: "/images/js.png" },
-            { name: "CSS3", icon: "/images/css1.png" },
-            { name: "HTML5", icon: "/images/html1.png" },
+            { name: "Photoshop", icon: "/images/ps.png" },
+            { name: "Illustrator", icon: "/images/ai.png" },
+            { name: "Figma", icon: "/images/figma2.png" },
+            { name: "CSS", icon: "/images/css1.png" },
+            { name: "HTML", icon: "/images/html1.png" },
           ],
           features: [
-            "Elegant restaurant design",
-            "Menu præsentation med billeder",
-            "Booking og reservation system",
-            "Responsivt design",
-            "SEO optimeret indhold",
+            "Responsivt design til mobil, tablet og desktop med min. tre breakpoints",
+            "Semantisk HTML og valideret CSS",
+            "Responsiv menu og optimeret performance (page load / Lighthouse)",
+            "Samarbejdsbaseret kodeudvikling (Git/Github)",
           ],
           screenshots: [
             "/images/banken1.png",
             "/images/banken2.png",
             "/images/banken3.png",
           ],
+          liveDemoUrl: "https://responsiv.cilletalbot.dk/index.html",
         };
-      case "4": // Steeno Museet
+      case "4": // Steno Museet
         return {
           description: [
-            "Steeno Museet er et interaktivt museum website der kombinerer uddannelse med underholdning. Projektet fokuserer på at skabe en engagerende oplevelse for besøgende gennem interaktive elementer og quiz funktionalitet.",
-            "Website'en tilbyder en omfattende oversigt over museets udstillinger, events og interaktive features. Besøgende kan deltage i quizzer, udforske virtuelle udstillinger og lære om museets historie og samlinger.",
-            "Projektet implementerer moderne web teknologier for at skabe en smooth og lærerig brugeroplevelse der appellerer til alle aldre.",
+            "Steno Museet – Den Oversete Krop er en interaktiv digital løsning til Steno Museets udstilling om angst for børn (6-13 år) og deres forældre. Projektet kombinerer storytelling, quizzer, illustrationer og en angst-boks prototype.",
+            "Løsningen er udviklet gennem UX-metoder som tests, personas, wireframes og Figma design, og implementeret i HTML, CSS og JavaScript for at skabe en engagerende og lærerig oplevelse.",
           ],
           technologies: [
-            { name: "React", icon: "/images/react1.png" },
+            { name: "HTML", icon: "/images/html1.png" },
+            { name: "CSS", icon: "/images/css1.png" },
+            { name: "Photoshop", icon: "/images/ps.png" },
+            { name: "Illustrator", icon: "/images/ai.png" },
             { name: "JavaScript", icon: "/images/js.png" },
-            { name: "CSS3", icon: "/images/css1.png" },
-            { name: "HTML5", icon: "/images/html1.png" },
+            { name: "Figma", icon: "/images/figma2.png" },
           ],
           features: [
-            "Interaktive quiz funktioner",
-            "Virtuelle udstillinger",
-            "Event kalender og booking",
-            "Responsivt design",
-            "Accessibility features",
+            "Interaktiv storytelling med fokus på mental sundhed (angst)",
+            "Målrettet børn og forældre gennem leg, quizzer og sanselige oplevelser",
+            "Visuel identitet med farvepalette, illustrationer og ikoner udviklet i Figma",
+            "Tegneværktøj og quiz implementeret i HTML, CSS og JavaScript",
           ],
-          screenshots: ["/images/stenomuseet.png"],
+          screenshots: [
+            "/images/steno1.png",
+            "/images/steeno2.png",
+            "/images/steeno3.png",
+          ],
+          errorImage: "/images/error.png",
+          liveDemoUrl: "https://angst-steno-eksamen.axelriis.dk/index.html",
         };
       default:
         return {
@@ -172,6 +185,7 @@ export default function ProjectDetail() {
           <div className={styles.actionButtons}>
             <a
               href={
+                content.liveDemoUrl ||
                 project.links?.find((link) => link.text === "Live Demo")?.url ||
                 "#"
               }
@@ -183,7 +197,17 @@ export default function ProjectDetail() {
               <span className={styles.arrowIcon}>↗</span>
             </a>
             <a
-              href="https://github.com/annetteskou"
+              href={
+                project.id === 1
+                  ? "https://github.com/Annetteskou/Zerobuzzbrew"
+                  : project.id === 2
+                  ? "https://github.com/Annetteskou/Eksamen-Radar"
+                  : project.id === 3
+                  ? "https://github.com/Annetteskou/Responsivweb"
+                  : project.id === 4
+                  ? "https://github.com/Annetteskou/Steno_angst"
+                  : "https://github.com/Annetteskou"
+              }
               className={styles.actionButton}
               target="_blank"
               rel="noreferrer"
@@ -196,6 +220,16 @@ export default function ProjectDetail() {
               GitHub
             </a>
           </div>
+
+          {content.errorImage && (
+            <div className={styles.errorImageContainer}>
+              <img
+                src={content.errorImage}
+                alt="Error message"
+                className={styles.errorImage}
+              />
+            </div>
+          )}
 
           <div className={styles.technologiesSection}>
             <div className={styles.sectionTitle}>Programmer anvendt</div>

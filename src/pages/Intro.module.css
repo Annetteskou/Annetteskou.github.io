@@ -17,20 +17,46 @@
 
 .title {
   font-size: 3rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   background: linear-gradient(90deg, #ff73b3, #6366f1);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: white;  /* hvid fyld */
-  -webkit-text-stroke: 1px black;  /* sort kant */
+  -webkit-text-fill-color: white; /* hvid fyld */
+  -webkit-text-stroke: 1px black; /* sort kant */
 }
 
-
-
 @keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  to { opacity: 0; visibility: hidden; }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
 }

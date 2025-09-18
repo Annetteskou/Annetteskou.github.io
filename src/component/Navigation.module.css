@@ -60,3 +60,54 @@
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.4);
   transform: translateY(1px);
 }
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .nav {
+    padding: 1.5rem clamp(1rem, 4vw, 2.5rem);
+  }
+
+  .codeSymbol {
+    font-size: 1.3rem;
+  }
+
+  .link {
+    font-size: 1.3rem;
+    padding: 0.4rem 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav {
+    padding: 1.2rem clamp(0.8rem, 3vw, 2rem);
+  }
+
+  .codeSymbol {
+    font-size: 1.2rem;
+  }
+
+  .link {
+    font-size: 1.2rem;
+    padding: 0.3rem 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 1rem clamp(0.5rem, 2vw, 1.5rem);
+    gap: 0.8rem;
+  }
+
+  .codeSymbol {
+    font-size: 1.1rem;
+  }
+
+  .link {
+    font-size: 1.1rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .navLinks {
+    gap: 0.8rem;
+  }
+}

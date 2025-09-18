@@ -260,7 +260,11 @@ export default function ProjectDetail() {
         </div>
 
         <div className={styles.leftColumn}>
-          <div className={styles.screenshotContainer}>
+          <div
+            className={`${styles.screenshotContainer} ${
+              project.id === 2 ? styles.radarScreenshots : ""
+            }`}
+          >
             {content.screenshots.map((screenshot, index) => (
               <img
                 key={index}

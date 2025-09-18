@@ -353,8 +353,8 @@
   /* pilates */
   position: absolute;
   top: 400px;
-  right: -10px;
-  width: 500px;
+  right: 100px;
+  width: 400px;
   z-index: 0;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }

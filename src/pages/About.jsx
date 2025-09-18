@@ -1,30 +1,39 @@
+// Importerer React hooks til state management
 import { useState } from "react";
+// Importerer React Router til navigation
 import { useNavigate } from "react-router";
+// Importerer CSS styles for denne side
 import styles from "./About.module.css";
+// Importerer floating lights komponenten til baggrundseffekt
 import FloatingLights from "../component/FloatingLights";
 
+// Hovedkomponenten for "Om mig" siden
 export default function About() {
+  // State til at holde styr på hvilket billede der er zoomed
   const [zoomedImg, setZoomedImg] = useState(null);
+  // Hook til navigation mellem sider
   const navigate = useNavigate();
 
+  // Funktion til at håndtere klik på billeder (zoom effekt)
   const handleImageClick = (imgId) => {
-    // If clicking the same image that's already zoomed, do nothing (it will auto-reset)
+    // Hvis man klikker på samme billede der allerede er zoomed, gør ingenting
     if (zoomedImg === imgId) return;
 
-    // Set the new zoomed image
+    // Sæt det nye zoomed billede
     setZoomedImg(imgId);
 
-    // Auto-reset after 2 seconds
+    // Auto-reset efter 2 sekunder
     setTimeout(() => {
       setZoomedImg(null);
     }, 2000);
   };
 
+  // Funktion til at downloade CV
   const handleDownloadCV = () => {
-    // Create a link element to trigger download
+    // Opret et link element til at trigge download
     const link = document.createElement("a");
-    link.href = "/CV- Annette Skou.pdf"; // Path to your CV file
-    link.download = "CV- Annette Skou.pdf"; // Name of the downloaded file
+    link.href = "/CV- Annette Skou.pdf"; // Sti til CV filen
+    link.download = "CV- Annette Skou.pdf"; // Navn på den downloadede fil
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -40,7 +49,7 @@ export default function About() {
           <section className={styles.aboutSection}>
             <h2 className={styles.title}>&gt; Om mig</h2>
             <p>
-              &gt; Mit navn er Annette Skou, jeg er 25 år og studere
+              &gt; Mit navn er Annette Skou, jeg er 25 år og studerer
               multimediedesign på Erhvervsakademi Aarhus i Viby, hvor jeg har
               specialiseret mig som frontend developer.
             </p>

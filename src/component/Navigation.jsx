@@ -1,11 +1,17 @@
-import { NavLink } from "react-router"; // eller "react-router" hvis du kører den nye
+// Importerer NavLink til navigation mellem sider
+import { NavLink } from "react-router";
+// Importerer CSS styles for navigation
 import styles from "./Navigation.module.css";
 
+// Navigation komponenten der viser hovedmenuen
 export default function Navigation() {
   return (
     <nav className={styles.nav}>
+      {/* HTML kode symbol */}
       <div className={styles.codeSymbol}>&lt;/&gt;</div>
+      {/* Navigation links container */}
       <div className={styles.navLinks}>
+        {/* Hjem link */}
         <NavLink
           to="/"
           end
@@ -15,6 +21,7 @@ export default function Navigation() {
         >
           Hjem
         </NavLink>
+        {/* Projekt link */}
         <NavLink
           to="/project"
           className={({ isActive }) =>
@@ -23,6 +30,7 @@ export default function Navigation() {
         >
           Projekt
         </NavLink>
+        {/* Om mig link */}
         <NavLink
           to="/about"
           className={({ isActive }) =>
@@ -31,6 +39,7 @@ export default function Navigation() {
         >
           Om mig
         </NavLink>
+        {/* Kontakt link */}
         <NavLink
           to="/contact"
           className={({ isActive }) =>

@@ -1,15 +1,26 @@
+// Importerer React hooks til state management og side effekter
 import { useEffect, useState } from "react";
+// Importerer React Router til at få URL parametre og navigation
 import { useParams, Link } from "react-router";
+// Importerer CSS styles for denne side
 import styles from "./ProjectDetail.module.css";
+// Importerer floating lights komponenten til baggrundseffekt
 import FloatingLights from "../component/FloatingLights";
 
+// Hovedkomponenten for projekt detail siden
 export default function ProjectDetail() {
+  // Henter projekt ID fra URL
   const { id } = useParams();
+  // State til at holde alle projekter
   const [projects, setProjects] = useState([]);
+  // State til at vise loading status
   const [loading, setLoading] = useState(true);
+  // State til at holde fejlbeskeder
   const [error, setError] = useState(null);
 
+  // useEffect hook der kører når komponenten loader
   useEffect(() => {
+    // Async funktion til at hente projekter fra JSON fil
     async function load() {
       try {
         const res = await fetch("/projects.json");
@@ -25,9 +36,10 @@ export default function ProjectDetail() {
     load();
   }, []);
 
+  // Finder det specifikke projekt baseret på ID fra URL
   const project = projects.find((p) => String(p.id) === String(id));
 
-  // Get project-specific content
+  // Funktion der returnerer projekt-specifik indhold baseret på ID
   const getProjectContent = (projectId) => {
     switch (projectId) {
       case "1": // Zero Buzz Brew
@@ -171,7 +183,7 @@ export default function ProjectDetail() {
           <div className={styles.projectHeader}>
             <h1 className={styles.projectTitle}>
               {project.title === "Radar"
-                ? "Radar Eksemensprojekt"
+                ? "Radar Eksamensprojekt"
                 : project.title}
             </h1>
           </div>

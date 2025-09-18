@@ -33,9 +33,8 @@ export default function ProjectDetail() {
       case "1": // Zero Buzz Brew
         return {
           description: [
-            "Zero Buzz Brew er en moderne e-commerce platform for alkoholfri øl, designet med fokus på brugervenlighed og moderne design. Projektet kombinerer React frontend med en robust backend arkitektur.",
-            "Platformen tilbyder en omfattende katalog af alkoholfri øl fra forskellige bryggerier, med avancerede filtrerings- og søgefunktioner. Brugerne kan nemt finde deres favorit øl baseret på smag, type og ingredienser.",
-            "Projektet implementerer moderne web teknologier og best practices for at sikre optimal performance og brugeroplevelse.",
+            "Zero Buzz er et projekt med fokus på at skabe alkoholfri fællesskaber og events. Opgaven gik ud på at udvikle et digitalt koncept, der giver unge et inspirerende alternativ til den traditionelle festkultur.",
+            "Vi arbejdede med brugerundersøgelser, idéudvikling og prototyping for at finde frem til et design, som formidler Zero Buzz' værdier på en moderne og inkluderende måde. Resultatet blev en responsiv prototype med friske farver, klare budskaber og en intuitiv brugeroplevelse, der understøtter budskabet om, at fællesskab og sjov ikke behøver at afhænge af alkohol.",
           ],
           technologies: [
             { name: "React", icon: "/images/react1.png" },
@@ -50,7 +49,11 @@ export default function ProjectDetail() {
             "Brugerkonto og ordrehistorik",
             "SEO optimeret for bedre synlighed",
           ],
-          screenshots: ["/images/zerobuzz.png"],
+          screenshots: [
+            "/images/zerobuzz1.png",
+            "/images/zerobuzz3.png",
+            "/images/zerobuzz4.png",
+          ],
         };
       case "2": // Radar
         return {
@@ -96,7 +99,11 @@ export default function ProjectDetail() {
             "Responsivt design",
             "SEO optimeret indhold",
           ],
-          screenshots: ["/images/banken.png"],
+          screenshots: [
+            "/images/banken1.png",
+            "/images/banken2.png",
+            "/images/banken3.png",
+          ],
         };
       case "4": // Steeno Museet
         return {
@@ -139,14 +146,16 @@ export default function ProjectDetail() {
   return (
     <main className={styles.detailPage}>
       <FloatingLights />
-      <Link to="/project" className={styles.backLink}>
-        ← Tilbage til Projekter
-      </Link>
+      <div className={styles.breadcrumbContainer}>
+        <Link to="/project" className={styles.backButton}>
+          ← Tilbage
+        </Link>
+        <span className={styles.breadcrumb}>Projekt &gt; {project.title}</span>
+      </div>
 
       <div className={styles.container}>
         <div className={styles.rightColumn}>
           <div className={styles.projectHeader}>
-            <h2 className={styles.pageTitle}>Projekt - Detailer</h2>
             <h1 className={styles.projectTitle}>
               {project.title === "Radar"
                 ? "Radar Eksemensprojekt"
@@ -171,11 +180,7 @@ export default function ProjectDetail() {
               rel="noreferrer"
             >
               Live Demo
-              <img
-                src="/images/Go-to-file_icon.png"
-                alt="Go to"
-                className={styles.goToIcon}
-              />
+              <span className={styles.arrowIcon}>↗</span>
             </a>
             <a
               href="https://github.com/annetteskou"

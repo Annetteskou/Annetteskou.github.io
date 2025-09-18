@@ -28,26 +28,45 @@
 .rightColumn {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0.5rem;
 }
 
-.backLink {
-  color: #1e6bb8;
+.breadcrumbContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.backButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  color: #eaeaea;
   text-decoration: none;
   font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  margin-bottom: 2rem;
+  font-weight: normal;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
-.backLink:hover {
-  color: #1a4d80;
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #eaeaea;
+}
+
+.breadcrumb {
+  color: #b0b0b0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .projectHeader {
-  margin-bottom: 1rem;
+  margin-bottom: -1.5rem;
 }
 
 .pageTitle {
@@ -62,7 +81,7 @@
   font-family: "Courier New", Courier, monospace;
   font-size: 3rem;
   color: #6ea0dc;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 2.5rem 0;
   font-weight: bold;
   text-shadow: 0 0 10px rgba(110, 160, 220, 0.5);
   position: relative;
@@ -154,14 +173,13 @@
 }
 
 .liveDemoButton {
-  color: #4a7ba7 !important;
+  color: #0066ff !important;
 }
 
-.goToIcon {
-  width: 20px;
-  height: 20px;
-  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%)
-    hue-rotate(200deg) brightness(104%) contrast(97%);
+.arrowIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0066ff;
 }
 
 .githubIcon {
@@ -192,6 +210,7 @@
   border-radius: 15px;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
 }
 
 .technologiesGrid {
@@ -213,10 +232,38 @@
   transform: translateY(-2px);
 }
 
+.techItem:hover .techIcon {
+  filter: drop-shadow(0 0 10px #0066ff);
+}
+
 .techIcon {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+  background: transparent;
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.techIcon[src*="html1.png"] {
+  transform: scale(2.8);
+}
+
+.techIcon[src*="css1.png"] {
+  transform: scale(1.1);
+}
+
+.techIcon[src*="ps.png"] {
+  transform: scale(0.9);
+}
+
+.techIcon[src*="react1.png"] {
+  transform: scale(1.8);
+}
+
+.techIcon[src*="js.png"] {
+  transform: scale(0.8);
 }
 
 .techItem span {
@@ -230,6 +277,7 @@
   border-radius: 15px;
   padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
 }
 
 .featuresList {

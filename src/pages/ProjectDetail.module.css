@@ -1,5 +1,8 @@
-/* ProjectDetail.module.css */
+/* ========================================
+   PROJEKT DETALJE SIDE STYLING - ProjectDetail.module.css
+   ======================================== */
 
+/* Hovedcontainer for projekt detalje siden */
 .detailPage {
   background: transparent;
   min-height: 100vh;
@@ -9,6 +12,7 @@
   overflow: hidden;
 }
 
+/* Grid container med to kolonner for indhold */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -19,18 +23,21 @@
   z-index: 1;
 }
 
+/* Venstre kolonne med tekst indhold */
 .leftColumn {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+/* Højre kolonne med billeder og screenshots */
 .rightColumn {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
+/* Container for navigations brødkrumme */
 .breadcrumbContainer {
   display: flex;
   align-items: center;
@@ -39,6 +46,7 @@
   margin-bottom: 2rem;
 }
 
+/* Tilbage knap til projekt oversigt */
 .backButton {
   background: rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -53,11 +61,13 @@
   display: inline-block;
 }
 
+/* backButton:hover - CSS styling */
 .backButton:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #eaeaea;
 }
 
+/* Brødkrumme navigation tekst */
 .breadcrumb {
   color: #b0b0b0;
   font-family: "Courier New", Courier, monospace;
@@ -65,10 +75,12 @@
   font-weight: normal;
 }
 
+/* Header sektion med projekt titel */
 .projectHeader {
   margin-bottom: -1.5rem;
 }
 
+/* Side titel med monospace font */
 .pageTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.2rem;
@@ -77,6 +89,7 @@
   font-weight: normal;
 }
 
+/* Hovedtitel for projektet */
 .projectTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 3rem;
@@ -87,6 +100,7 @@
   position: relative;
 }
 
+/* projectTitle::after - CSS styling */
 .projectTitle::after {
   content: "";
   position: absolute;
@@ -98,6 +112,7 @@
   border-radius: 2px;
 }
 
+/* Underoverskrift for projektet */
 .projectSubtitle {
   color: #b0b0b0;
   margin: 0;
@@ -105,6 +120,7 @@
   font-size: 1.2rem;
 }
 
+/* Sektion titel med stjerne ikon */
 .sectionTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
@@ -114,11 +130,13 @@
   text-shadow: 0 0 5px rgba(110, 160, 220, 0.3);
 }
 
+/* Guld stjerne ikon med glød effekt */
 .starIcon {
   color: #ffd700;
   text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
 }
 
+/* Beskrivelse af projektet med baggrund */
 .projectDescription {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -128,20 +146,24 @@
   line-height: 1.6;
 }
 
+/* projectDescription p - CSS styling */
 .projectDescription p {
   margin: 0 0 1rem 0;
 }
 
+/* projectDescription p:last-child - CSS styling */
 .projectDescription p:last-child {
   margin-bottom: 0;
 }
 
+/* Container for action knapper */
 .actionButtons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
 
+/* Generel action knap styling */
 .actionButton {
   padding: 0.8rem 1.5rem;
   font-family: "Courier New", Courier, monospace;
@@ -160,28 +182,33 @@
   gap: 0.5rem;
 }
 
+/* actionButton:hover - CSS styling */
 .actionButton:hover {
   background: #3a3a3a;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* actionButton:active - CSS styling */
 .actionButton:active {
   background: #1a1a1a;
   transform: translateY(0px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* Live demo knap med blå farve */
 .liveDemoButton {
   color: #0066ff !important;
 }
 
+/* Pil ikon i knapper */
 .arrowIcon {
   font-size: 1.2rem;
   font-weight: bold;
   color: #0066ff;
 }
 
+/* GitHub ikon styling */
 .githubIcon {
   width: 20px;
   height: 20px;
@@ -205,6 +232,7 @@
   }
 }
 
+/* Sektion med teknologier og værktøjer */
 .technologiesSection {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -213,12 +241,14 @@
   margin-top: 2rem;
 }
 
+/* Grid layout for teknologi ikoner */
 .technologiesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 1rem;
 }
 
+/* Individuel teknologi item med hover effekt */
 .techItem {
   display: flex;
   flex-direction: column;
@@ -228,14 +258,17 @@
   transition: all 0.3s ease;
 }
 
+/* techItem:hover - CSS styling */
 .techItem:hover {
   transform: translateY(-2px);
 }
 
+/* techItem:hover .techIcon - CSS styling */
 .techItem:hover .techIcon {
   filter: drop-shadow(0 0 10px #0066ff);
 }
 
+/* Teknologi ikon med forskellige størrelser */
 .techIcon {
   width: 80px;
   height: 80px;
@@ -246,40 +279,49 @@
   margin: 0 auto;
 }
 
+/* techIcon[src*="html1.png"] - CSS styling */
 .techIcon[src*="html1.png"] {
   transform: scale(2.8);
 }
 
+/* techIcon[src*="css1.png"] - CSS styling */
 .techIcon[src*="css1.png"] {
   transform: scale(1.1);
 }
 
+/* techIcon[src*="ps.png"] - CSS styling */
 .techIcon[src*="ps.png"] {
   transform: scale(0.9);
 }
 
+/* techIcon[src*="react1.png"] - CSS styling */
 .techIcon[src*="react1.png"] {
   transform: scale(1.8);
 }
 
+/* techIcon[src*="js.png"] - CSS styling */
 .techIcon[src*="js.png"] {
   transform: scale(0.8);
 }
 
+/* techIcon[src*="figma2.png"] - CSS styling */
 .techIcon[src*="figma2.png"] {
   transform: scale(2);
 }
 
+/* techItem span - CSS styling */
 .techItem span {
   font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
 }
 
+/* Container for fejl billede */
 .errorImageContainer {
   margin: 1rem 0;
 }
 
+/* Fejl billede med hover zoom effekt */
 .errorImage {
   width: 100%;
   max-width: 800px;
@@ -290,12 +332,14 @@
   cursor: pointer;
 }
 
+/* errorImage:hover - CSS styling */
 .errorImage:hover {
   transform: scale(1.5);
   z-index: 9999;
   transition: transform 0.3s ease;
 }
 
+/* Sektion med nøgle funktioner */
 .keyFeaturesSection {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
@@ -304,12 +348,14 @@
   margin-top: 2rem;
 }
 
+/* Liste med projekt funktioner */
 .featuresList {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* featuresList li - CSS styling */
 .featuresList li {
   padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -317,10 +363,12 @@
   padding-left: 1.5rem;
 }
 
+/* featuresList li:last-child - CSS styling */
 .featuresList li:last-child {
   border-bottom: none;
 }
 
+/* featuresList li::before - CSS styling */
 .featuresList li::before {
   content: "▶";
   position: absolute;
@@ -329,6 +377,7 @@
   font-size: 0.8rem;
 }
 
+/* Container for projekt screenshots */
 .screenshotContainer {
   display: flex;
   flex-direction: column;
@@ -337,11 +386,13 @@
   margin-top: 3rem;
 }
 
+/* Specifik styling for Radar projekt screenshots */
 .radarScreenshots {
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
+/* Individuelt screenshot billede */
 .screenshot {
   max-width: 100%;
   height: auto;
@@ -350,11 +401,14 @@
   transition: transform 0.3s ease;
 }
 
+/* screenshot:hover - CSS styling */
 .screenshot:hover {
   transform: scale(1.02);
 }
 
-/* Responsive design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .container {
     gap: 3rem;
@@ -365,6 +419,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (992px)
+   ======================================== */
 @media (max-width: 992px) {
   .container {
     gap: 2.5rem;
@@ -379,6 +436,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (768px)
+   ======================================== */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;

@@ -1,3 +1,9 @@
+// ========================================
+// FORSIDE KOMPONENT - Home.jsx
+// ========================================
+// Dette er forsiden med hero sektion, titel, rolle beskrivelse
+// og sociale medier links samt monitor animation
+
 // Importerer React Router til navigation
 import { NavLink } from "react-router";
 // Importerer CSS styles for denne side
@@ -9,15 +15,17 @@ import FloatingLights from "../component/FloatingLights";
 export default function Home() {
   return (
     <main className={styles.home}>
+      {/* Floating lights baggrundseffekt - animerede lys kugler der flyder rundt */}
       <FloatingLights />
 
-      {/* Øverste linje (kant-til-kant) */}
+      {/* Øverste linje (kant-til-kant) - hero sektion med titel og rolle */}
       <div className={`${styles.rule} ${styles.ruleTop}`} />
 
-      {/* HERO GRID */}
+      {/* HERO GRID - hovedsektion med velkomst besked og rolle */}
       <section className={styles.hero}>
         {/* Række 1: Titel (venstre) + Rolle-tekst (højre) */}
         <div className={styles.titleBlock}>
+          {/* Hovedtitel med velkomst besked */}
           <h1 className={styles.title}>
             Velkommen
             <br />
@@ -27,6 +35,7 @@ export default function Home() {
           </h1>
         </div>
 
+        {/* Rolle beskrivelse med chevron symbol */}
         <p className={styles.role}>
           <span className={styles.chev}>&gt;</span> Multimediedesigner
           Studerende
@@ -57,9 +66,9 @@ export default function Home() {
             <div className={styles.codeSymbol}>&lt;/&gt;</div>
           </div>
 
-          {/* Sociale medier links */}
+          {/* Sociale medier links - GitHub, LinkedIn, Instagram, Facebook */}
           <div className={styles.socials}>
-            {/* GitHub link */}
+            {/* GitHub link - til GitHub profil */}
             <a
               href="https://github.com/Annetteskou"
               target="_blank"
@@ -71,7 +80,7 @@ export default function Home() {
                 className={styles.githubIcon}
               />
             </a>
-            {/* LinkedIn link */}
+            {/* LinkedIn link - til LinkedIn profil */}
             <a href="https://linkedin.com/" target="_blank" rel="noreferrer">
               <img
                 src="/images/LINK.png"
@@ -79,7 +88,7 @@ export default function Home() {
                 className={styles.linkedinIcon}
               />
             </a>
-            {/* Instagram link */}
+            {/* Instagram link - til Instagram profil */}
             <a href="https://instagram.com/" target="_blank" rel="noreferrer">
               <img
                 src="/images/instagram.png"
@@ -87,7 +96,7 @@ export default function Home() {
                 className={styles.instagramIcon}
               />
             </a>
-            {/* Facebook link */}
+            {/* Facebook link - til Facebook profil */}
             <a href="https://facebook.com/" target="_blank" rel="noreferrer">
               <img
                 src="/images/facebook.png"
@@ -98,7 +107,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Monitor sektion med coding animation */}
+        {/* Monitor sektion med coding animation - animeret GIF af kodning */}
         <div className={styles.monitorWrap}>
           <div className={styles.monitorFrame}>
             <img

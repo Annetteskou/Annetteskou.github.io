@@ -1,7 +1,11 @@
-/* ========= BAGGRUND ========= */
+/* ========================================
+   FORSIDE BAGGRUND OG LAYOUT - Home.module.css
+   ======================================== */
+
+/* Hovedcontainer for forsiden med baggrund og padding */
 .home {
   --pad: clamp(18px, 4vw, 36px);
-  --band-gap: clamp(28px, 5vw, 56px); /* afstand fra titel til hver linje */
+  --band-gap: clamp(28px, 5vw, 56px);
   min-height: 100dvh;
   padding: 18px var(--pad);
   background: url("/images/grid_gray_robot.png") center/cover no-repeat #2d313b;
@@ -10,14 +14,14 @@
   overflow: hidden;
 }
 
-/* ========= LINJER ========= */
+/* Dekorativ linje med gradient baggrund */
 .rule {
   height: 6px;
   border-radius: 3px;
   background: linear-gradient(90deg, #6ea0dc 0%, #ffffff 100%);
 }
 
-/* top-linje skal ikke klistre til nav */
+/* home > .ruleTop - CSS styling */
 .home > .ruleTop {
   margin-top: 80px;
   margin-bottom: -50px;
@@ -26,7 +30,7 @@
   width: calc(100% + var(--pad) * 2);
 }
 
-/* midterlinjen går på tværs og er symmetrisk under titel */
+/* ruleMid - CSS styling */
 .ruleMid {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -37,10 +41,11 @@
   background: linear-gradient(90deg, #ffffff 0%, #6ea0dc 100%);
 }
 
-/* ========= HERO GRID ========= */
-/* Række 1: titel (venstre) + rolle (højre)
-   Række 2: midterlinje
-   Række 3: intro/socials (venstre) + monitor (højre) */
+/* Dette er hovedgrid'et der organiserer indholdet på forsiden i 3 rækker:
+   Række 1: Hovedtitel (venstre) + Rolle tekst (højre)
+   Række 2: Midterlinje (spænder over hele bredden)
+   Række 3: Intro/socials (venstre) + Monitor animation (højre) */
+/* Hero sektion med grid layout */
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -52,13 +57,13 @@
   z-index: 1;
 }
 
-/* ----- Række 1 ----- */
+/* Container for hovedtitel */
 .titleBlock {
   grid-column: 1;
   grid-row: 1;
 }
 
-/* overskriften får luft op og ned = ligger "midt mellem" linjerne */
+/* Hovedtitel med velkomst besked */
 .title {
   font-family: "Courier New", Courier, monospace;
   line-height: 1.14;
@@ -68,12 +73,12 @@
   font-weight: normal;
 }
 
-/* Rolle-tekst: midt i højre kolonne på samme højde som titlen */
+/* Rolle beskrivelse med chevron symboler */
 .role {
   grid-column: 2;
   grid-row: 1;
-  align-self: center; /* lodret midt i båndet */
-  justify-self: end; /* højre-justeret i kolonnen */
+  align-self: center;
+  justify-self: end;
   text-align: right;
   margin: 0;
   max-width: none;
@@ -84,24 +89,28 @@
   line-height: 1.3;
   margin-right: 100px;
 }
+
+/* chev - CSS styling */
 .chev {
   color: white;
   margin-left: 6px;
 }
+
+/* subRole - CSS styling */
 .subRole {
   color: rgba(234, 234, 234, 0.932);
   font-size: clamp(18px, 2.5vw, 24px);
   margin-right: 30px;
 }
 
-/* ----- Række 3 ----- */
+/* leftBottom - CSS styling */
 .leftBottom {
   grid-column: 1;
   grid-row: 3;
   margin-left: 100px;
 }
 
-/* “Hej jeg er” + navn */
+/* helloRow - CSS styling */
 .helloRow {
   display: flex;
   align-items: center;
@@ -109,17 +118,23 @@
   margin-top: 8px;
   margin-left: -10px;
 }
+
+/* muted - CSS styling */
 .muted {
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(25px, 2.5vw, 24px);
   white-space: nowrap;
 }
+
+/* dash - CSS styling */
 .dash {
   width: clamp(60px, 5vw, 100px);
   height: 1px;
   background: white;
 }
+
+/* name - CSS styling */
 .name {
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(36px, 5vw, 52px);
@@ -130,11 +145,12 @@
   margin-top: 40px;
 }
 
+/* lastName - CSS styling */
 .lastName {
   margin-left: 4ch;
 }
 
-/* Intro section */
+/* introSection - CSS styling */
 .introSection {
   display: flex;
   flex-direction: column;
@@ -142,7 +158,7 @@
   margin-top: 8px;
 }
 
-/* Code symbol */
+/* codeSymbol - CSS styling */
 .codeSymbol {
   font-family: "Courier New", Courier, monospace;
   font-size: clamp(16px, 2.5vw, 24px);
@@ -152,7 +168,7 @@
   margin-top: -65px;
 }
 
-/* Socials */
+/* Container for sociale medier ikoner */
 .socials {
   display: flex;
   gap: 14px;
@@ -161,7 +177,7 @@
   margin-left: 5px;
 }
 
-/* Individual social icon classes */
+/* GitHub ikon styling */
 .githubIcon {
   width: 70px;
   height: 70px;
@@ -174,6 +190,8 @@
   display: block;
   border: none;
 }
+
+/* linkedinIcon - CSS styling */
 .linkedinIcon {
   width: 60px;
   height: 60px;
@@ -185,6 +203,8 @@
   padding: 0;
   display: block;
 }
+
+/* instagramIcon - CSS styling */
 .instagramIcon {
   width: 60px;
   height: 60px;
@@ -196,6 +216,8 @@
   padding: 0;
   display: block;
 }
+
+/* facebookIcon - CSS styling */
 .facebookIcon {
   width: 60px;
   height: 60px;
@@ -208,33 +230,40 @@
   display: block;
 }
 
+/* githubIcon:hover - CSS styling */
 .githubIcon:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
     0 0 40px rgba(255, 255, 255, 0.4);
 }
+
+/* linkedinIcon:hover - CSS styling */
 .linkedinIcon:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
     0 0 40px rgba(255, 255, 255, 0.4);
 }
+
+/* instagramIcon:hover - CSS styling */
 .instagramIcon:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
     0 0 40px rgba(255, 255, 255, 0.4);
 }
+
+/* facebookIcon:hover - CSS styling */
 .facebookIcon:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(110, 160, 220, 0.6),
     0 0 40px rgba(255, 255, 255, 0.4);
 }
 
-/* Monitor – mindre og trukket ind fra højre */
+/* Container for monitor animation */
 .monitorWrap {
   grid-column: 2;
   grid-row: 3;
   justify-self: start;
-  width: min(300px, 21vw); /* <- skala som mockup; justér her hvis ønsket */
+  width: min(300px, 21vw);
   margin: 0;
   margin-left: 200px;
   padding: 0;
@@ -242,15 +271,22 @@
   box-shadow: none;
   background: transparent;
 }
+
+/* monitorWrap::before, - CSS styling */
 .monitorWrap::before,
+/* monitorWrap::after - CSS styling */
 .monitorWrap::after {
   display: none;
 }
+
+/* Monitor ramme med coding GIF */
 .monitorFrame {
   padding: 0;
   border: none;
   background: transparent;
 }
+
+/* monitorFrame img - CSS styling */
 .monitorFrame img {
   display: block;
   width: 100%;
@@ -258,12 +294,18 @@
   border-radius: 0;
 }
 
-/* ========= RESPONSIV ========= */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .monitorWrap {
     width: min(220px, 23vw);
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (980px)
+   ======================================== */
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
@@ -295,6 +337,10 @@
     justify-self: start;
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (700px)
+   ======================================== */
 @media (max-width: 700px) {
   .socials img {
     width: 50px;

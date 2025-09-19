@@ -1,3 +1,9 @@
+// ========================================
+// OM MIG SIDE KOMPONENT - About.jsx
+// ========================================
+// Dette er "Om mig" siden hvor brugeren kan læse om Annette
+// og se hendes skills, billeder og downloade CV
+
 // Importerer React hooks til state management
 import { useState } from "react";
 // Importerer React Router til navigation
@@ -19,7 +25,7 @@ export default function About() {
     // Hvis man klikker på samme billede der allerede er zoomed, gør ingenting
     if (zoomedImg === imgId) return;
 
-    // Sæt det nye zoomed billede
+    // Sæt det nye zoomed billede - dette aktiverer zoom CSS klassen
     setZoomedImg(imgId);
 
     // Auto-reset efter 2 sekunder
@@ -41,11 +47,14 @@ export default function About() {
 
   return (
     <main className={styles.aboutPage}>
+      {/* Floating lights baggrundseffekt - animerede lys kugler */}
       <FloatingLights />
 
+      {/* Hovedcontainer med grid layout */}
       <div className={styles.gridContainer}>
-        {/* Left Column */}
+        {/* Left Column - tekst indhold og knapper */}
         <div className={styles.leftColumn}>
+          {/* Om mig sektion med beskrivelse */}
           <section className={styles.aboutSection}>
             <h2 className={styles.title}>&gt; Om mig</h2>
             <p>
@@ -67,6 +76,7 @@ export default function About() {
               nye teknologier eller optimere eksisterende løsninger, går jeg
               altid all in.
             </p>
+            {/* Knap gruppe med CV download og projekter link */}
             <div className={styles.buttonGroup}>
               <button className={styles.button} onClick={handleDownloadCV}>
                 Download CV
@@ -80,6 +90,7 @@ export default function About() {
             </div>
           </section>
 
+          {/* Hobbier sektion med beskrivelse af fritidsaktiviteter */}
           <section className={styles.hobbiesSection}>
             <h2 className={styles.title}>&gt; Hobbier</h2>
             <p>
@@ -91,8 +102,9 @@ export default function About() {
           </section>
         </div>
 
-        {/* Right Column */}
+        {/* Right Column - billede galleri med forskellige billeder */}
         <div className={styles.rightColumn}>
+          {/* Billede vinduer container med alle billeder */}
           <div className={styles.imageWindows}>
             <img
               src="/images/mig2.png"

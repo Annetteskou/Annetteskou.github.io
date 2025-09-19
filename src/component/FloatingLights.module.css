@@ -1,3 +1,8 @@
+/* ========================================
+   FLOATING LIGHTS KOMPONENT STYLING - FloatingLights.module.css
+   ======================================== */
+
+/* floatingLights - CSS styling */
 .floatingLights {
   position: fixed;
   top: 0;
@@ -8,6 +13,7 @@
   z-index: 0;
 }
 
+/* lightOrb - CSS styling */
 .lightOrb {
   position: absolute;
   width: 500px;
@@ -27,6 +33,7 @@
   transform: translate(-50%, -50%);
 }
 
+/* lightOrb::before - CSS styling */
 .lightOrb::before {
   content: "";
   position: absolute;
@@ -45,6 +52,7 @@
   filter: blur(12px);
 }
 
+/* lightOrb::after - CSS styling */
 .lightOrb::after {
   content: "";
   position: absolute;

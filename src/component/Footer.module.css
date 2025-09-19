@@ -1,5 +1,8 @@
-/* Footer.module.css */
+/* ========================================
+   FOOTER KOMPONENT STYLING - Footer.module.css
+   ======================================== */
 
+/* footer - CSS styling */
 .footer {
   background: rgba(200, 202, 205, 0.4);
   border-top: 6px solid;
@@ -8,6 +11,7 @@
   margin-top: 5rem;
 }
 
+/* contactSection - CSS styling */
 .contactSection {
   background: transparent;
   padding: 0 0 5rem 0;
@@ -16,6 +20,7 @@
   position: relative;
 }
 
+/* contactTitle - CSS styling */
 .contactTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 2.5rem;
@@ -25,6 +30,7 @@
   text-shadow: 0 0 10px rgba(110, 160, 220, 0.5);
 }
 
+/* contactButton - CSS styling */
 .contactButton {
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   border: 1px solid black;
@@ -42,12 +48,14 @@
   z-index: 1;
 }
 
+/* contactButton:hover - CSS styling */
 .contactButton:hover {
   background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
+/* contactText - CSS styling */
 .contactText {
   color: #fff;
   font-family: "Courier New", Courier, monospace;
@@ -57,11 +65,13 @@
   text-stroke: 1px black;
 }
 
+/* contactContainer - CSS styling */
 .contactContainer {
   position: relative;
   display: inline-block;
 }
 
+/* contactIcon - CSS styling */
 .contactIcon {
   width: 160px;
   height: 160px;
@@ -72,6 +82,7 @@
   flex-shrink: 0;
 }
 
+/* footerContent - CSS styling */
 .footerContent {
   display: flex;
   justify-content: space-between;
@@ -83,16 +94,19 @@
     center/cover no-repeat;
 }
 
+/* leftSection - CSS styling */
 .leftSection {
   flex: 1;
 }
 
+/* footerNav - CSS styling */
 .footerNav {
   display: flex;
   gap: 2rem;
   margin-left: 1rem;
 }
 
+/* navLink - CSS styling */
 .navLink {
   color: #2d313b;
   text-decoration: none;
@@ -101,15 +115,18 @@
   transition: color 0.3s ease;
 }
 
+/* navLink:hover - CSS styling */
 .navLink:hover {
   color: #6ea0dc;
 }
 
+/* centerSection - CSS styling */
 .centerSection {
   flex: 1;
   text-align: center;
 }
 
+/* name - CSS styling */
 .name {
   color: #2d313b;
   font-family: "Courier New", Courier, monospace;
@@ -117,12 +134,14 @@
   font-weight: bold;
 }
 
+/* rightSection - CSS styling */
 .rightSection {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
 
+/* socialIcons - CSS styling */
 .socialIcons {
   display: flex;
   gap: 1rem;
@@ -130,6 +149,7 @@
   margin-right: 1rem;
 }
 
+/* socialIcon - CSS styling */
 .socialIcon {
   width: 60px;
   height: 60px;
@@ -141,6 +161,7 @@
   border: none;
 }
 
+/* GitHub ikon styling */
 .githubIcon {
   width: 70px;
   height: 70px;
@@ -152,7 +173,9 @@
   border: none;
 }
 
-/* Responsive design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .footerContent {
     padding: 0.6rem 1.5rem;
@@ -163,6 +186,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (992px)
+   ======================================== */
 @media (max-width: 992px) {
   .footerContent {
     padding: 0.5rem 1.2rem;
@@ -177,6 +203,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (768px)
+   ======================================== */
 @media (max-width: 768px) {
   .footerContent {
     flex-direction: column;

@@ -1,103 +1,139 @@
-/* About.module.css */
+/* ========================================
+   OM MIG SIDE STYLING - About.module.css
+   ======================================== */
 
+
+
+/* Hovedcontainer for om mig siden */
 .aboutPage {
-  padding: 2rem 0;
-  color: #eaeaea;
-  position: relative;
-  overflow: hidden;
+  padding: 2rem 0; 
+  color: #eaeaea; 
+  position: relative; 
+  overflow: hidden; 
 }
 
+
+
+/* Grid container med to kolonner */
 .gridContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin: 0 auto 15rem;
-  max-width: 1200px;
-  width: 90%;
-  padding: 0 1rem;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 0;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+  margin: 0 auto 15rem; 
+  max-width: 1200px; 
+  width: 90%; 
+  padding: 0 1rem; 
+  box-sizing: border-box; 
+  position: relative; 
+  z-index: 2; 
 }
 
+
+
+/* leftColumn, - CSS styling */
 .leftColumn,
+/* Højre kolonne med billeder og screenshots */
 .rightColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: flex; 
+  flex-direction: column; 
+  gap: 2rem; 
 }
 
+
+
+/* title - CSS styling */
 .title {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 3.5rem;
-  color: #81ace1;
-  font-weight: normal;
-  margin-bottom: -10px;
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 3.5rem; 
+  color: #81ace1; 
+  font-weight: normal; 
+  margin-bottom: -10px; 
 }
 
+
+
+/* aboutSection p - CSS styling */
 .aboutSection p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 50ch;
-  margin: 0 auto;
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  max-width: 50ch; 
+  margin: 0 auto; 
 }
 
+
+
+/* hobbiesSection - CSS styling */
 .hobbiesSection {
-  position: relative;
-  padding-bottom: 500px;
+  position: relative; 
+  padding-bottom: 500px; 
 }
 
+
+/* hobbiesSection p - CSS styling */
 .hobbiesSection p {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 50ch;
-  margin: 0 auto;
-  position: relative;
-  z-index: 0;
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  max-width: 50ch; 
+  margin: 0 auto; 
+  position: relative; 
+  z-index: 1; 
 }
 
+
+
+/* Container for knapper */
 .buttonGroup {
-  margin: 1.5rem auto 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 50ch;
-  width: 100%;
-  padding: 0 1rem;
-  box-sizing: border-box;
+  margin: 1.5rem auto 0; 
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; 
+  max-width: 50ch; 
+  width: 100%; 
+  padding: 0 1rem; 
+  box-sizing: border-box; 
 }
 
+
+
+/* Generel knap styling */
 .button {
-  padding: 0.5rem 1.5rem;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 1rem;
-  color: #fff;
-  text-decoration: none;
-  background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 1.5rem; 
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1rem; 
+  color: #fff; 
+  text-decoration: none; 
+  background: linear-gradient(
+    135deg,
+    #5b73a5 0%,
+    #eaeaea 100%
+  ); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  cursor: pointer;
-  transition: all 0.15s ease;
+  cursor: pointer; 
+  transition: all 0.15s ease; 
 }
 
+/* button:hover - CSS styling */
 .button:hover {
   background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* button:active - CSS styling */
 .button:active {
   background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: translateY(0px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* Skills Container - Glassmorphism */
+
+/* skillsContainer - CSS styling */
 .skillsContainer {
   background: rgba(255, 255, 255, 0.01);
   border-radius: 15px;
@@ -110,6 +146,7 @@
   margin-right: -100px;
 }
 
+/* skillsTitle - CSS styling */
 .skillsTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.5rem;
@@ -118,14 +155,16 @@
   font-weight: normal;
 }
 
+/* skillsGrid - CSS styling */
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem 1.5rem; /* row-gap column-gap */
+  gap: 1.5rem 1.5rem; 
   align-items: center;
   justify-items: center;
 }
 
+/* skillItem - CSS styling */
 .skillItem {
   display: flex;
   flex-direction: column;
@@ -134,63 +173,82 @@
   text-align: center;
 }
 
-/* Simple, clean hover animation */
+
+/* skillsGrid img - CSS styling */
 .skillsGrid img {
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
+/* skillsGrid img:hover - CSS styling */
 .skillsGrid img:hover {
   filter: drop-shadow(0 0 15px rgba(74, 144, 226, 0.8))
     drop-shadow(0 0 25px rgba(74, 144, 226, 0.4));
 }
 
-/* Uniform icon container sizes */
+
+/* jsIcon, - CSS styling */
 .jsIcon,
+/* reactIcon, - CSS styling */
 .reactIcon,
+/* htmlIcon, - CSS styling */
 .htmlIcon,
+/* cssIcon, - CSS styling */
 .cssIcon,
+/* viteIcon, - CSS styling */
 .viteIcon,
+/* figmaIcon, - CSS styling */
 .figmaIcon,
+/* psIcon, - CSS styling */
 .psIcon,
+/* aiIcon - CSS styling */
 .aiIcon {
   width: 65px;
   height: 65px;
 }
 
-/* Scale adjustments for visual uniformity */
+
+/* reactIcon - CSS styling */
 .reactIcon {
   transform: scale(2.3);
 }
 
+/* htmlIcon - CSS styling */
 .htmlIcon {
   transform: scale(3.8);
 }
 
+/* figmaIcon - CSS styling */
 .figmaIcon {
   transform: scale(2.8);
 }
 
+/* viteIcon - CSS styling */
 .viteIcon {
   transform: scale(1.7);
 }
 
+/* jsIcon - CSS styling */
 .jsIcon {
   transform: scale(1);
 }
 
+/* cssIcon - CSS styling */
 .cssIcon {
   transform: scale(1.5);
 }
 
+/* psIcon - CSS styling */
 .psIcon {
   transform: scale(1.3);
 }
 
+/* aiIcon - CSS styling */
 .aiIcon {
   transform: scale(1.5);
 }
 
+/* skillItem span - CSS styling */
 .skillItem span {
   font-size: 0.9rem;
   color: #fff;
@@ -198,13 +256,15 @@
   font-weight: bold;
 }
 
-/* Image Windows */
+
+/* imageWindows - CSS styling */
 .imageWindows {
   position: relative;
   height: 420px;
   margin-bottom: 2rem;
 }
 
+/* Billede vindue med hover effekter */
 .imageWindow {
   position: absolute;
   transition: all 0.3s ease;
@@ -214,17 +274,20 @@
   pointer-events: auto;
 }
 
+/* imageWindow.zoomed - CSS styling */
 .imageWindow.zoomed {
   transform: scale(1.2);
   z-index: 10;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* imageWindow:not(.zoomed):hover - CSS styling */
 .imageWindow:not(.zoomed):hover {
   transform: none;
   z-index: 0;
 }
 
+/* img1 - CSS styling */
 .img1 {
   top: 50px;
   left: 10%;
@@ -234,6 +297,7 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* img2 - CSS styling */
 .img2 {
   top: 220px;
   left: 100px;
@@ -243,6 +307,7 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* img3 - CSS styling */
 .img3 {
   top: 80px;
   left: 50%;
@@ -252,6 +317,7 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* bottomImages - CSS styling */
 .bottomImages {
   top: 1000px;
   position: absolute;
@@ -263,8 +329,9 @@
   z-index: 0;
 }
 
+/* img4 - CSS styling */
 .img4 {
-  /* maleri1 floating */
+  
   position: absolute;
   top: 100px;
   left: -200px;
@@ -273,6 +340,7 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* floatingMaleri - CSS styling */
 .floatingMaleri {
   animation: float 6s ease-in-out infinite;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
@@ -280,12 +348,14 @@
   z-index: 0;
 }
 
+/* floatingMaleri:hover - CSS styling */
 .floatingMaleri:hover {
   transform: scale(1.05) rotate(0deg) !important;
   filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4));
   z-index: 0;
 }
 
+/* floatingImage - CSS styling */
 .floatingImage {
   animation: float 6s ease-in-out infinite;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
@@ -293,6 +363,7 @@
   z-index: 0;
 }
 
+/* floatingImage:hover - CSS styling */
 .floatingImage:hover {
   transform: scale(1.05) rotate(0deg) !important;
   filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
@@ -309,8 +380,9 @@
   }
 }
 
+/* img5 - CSS styling */
 .img5 {
-  /* maleri2 floating */
+  
   position: absolute;
   top: 300px;
   left: -30px;
@@ -319,8 +391,9 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* img6 - CSS styling */
 .img6 {
-  /* maleri3 floating */
+  
   position: absolute;
   top: 100px;
   left: 90px;
@@ -329,17 +402,21 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover zoom effect only for maleri images */
+
+/* img4:hover, - CSS styling */
 .img4:hover,
+/* img5:hover, - CSS styling */
 .img5:hover,
+/* img6:hover - CSS styling */
 .img6:hover {
   transform: scale(1.1);
   z-index: 5;
   transition: all 0.3s ease;
 }
 
+/* img7 - CSS styling */
 .img7 {
-  /* gameboy */
+  
   position: absolute;
   top: 150px;
   right: -230px;
@@ -349,8 +426,9 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* img8 - CSS styling */
 .img8 {
-  /* pilates */
+  
   position: absolute;
   top: 400px;
   right: 100px;
@@ -359,8 +437,9 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* img9 - CSS styling */
 .img9 {
-  /* elden */
+  
   position: absolute;
   bottom: 220px;
   right: -200px;

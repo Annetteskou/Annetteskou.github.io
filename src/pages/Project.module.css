@@ -1,5 +1,8 @@
-/* Project.module.css */
+/* ========================================
+   PROJEKT OVERSIGT SIDE STYLING - Project.module.css
+   ======================================== */
 
+/* projectPage - CSS styling */
 .projectPage {
   padding: 4rem 1rem 6rem 1rem;
   color: #eaeaea;
@@ -7,6 +10,7 @@
   overflow: hidden;
 }
 
+/* title - CSS styling */
 .title {
   font-family: "Courier New", Courier, monospace;
   font-size: 2.5rem;
@@ -19,6 +23,7 @@
   z-index: 1;
 }
 
+/* title::after - CSS styling */
 .title::after {
   content: "";
   position: absolute;
@@ -31,6 +36,7 @@
   border-radius: 2px;
 }
 
+/* projectGrid - CSS styling */
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -41,6 +47,7 @@
   padding: 0 2rem;
 }
 
+/* projectCard - CSS styling */
 .projectCard {
   background: url("/images/metallic-silver-background-4071-x-2889-8sn9w8p1ueswhtcc.jpg")
     center/cover no-repeat;
@@ -55,6 +62,7 @@
   clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%);
 }
 
+/* projectCard::before - CSS styling */
 .projectCard::before {
   content: "";
   position: absolute;
@@ -73,16 +81,19 @@
   opacity: 0;
 }
 
+/* projectCard:hover::before - CSS styling */
 .projectCard:hover::before {
   left: 100%;
   opacity: 1;
 }
 
+/* projectCard:hover - CSS styling */
 .projectCard:hover {
   transform: translateY(-5px) scale(1.1);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
+/* projectImage - CSS styling */
 .projectImage {
   width: calc(100% - 80px);
   height: 200px;
@@ -92,6 +103,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* projectContent - CSS styling */
 .projectContent {
   padding: 0 1.5rem 1.5rem 1.5rem;
   flex: 1;
@@ -99,6 +111,7 @@
   flex-direction: column;
 }
 
+/* Hovedtitel for projektet */
 .projectTitle {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.4rem;
@@ -107,11 +120,13 @@
   font-weight: bold;
 }
 
+/* projectTitleClose - CSS styling */
 .projectTitleClose {
   margin-top: -1rem !important;
   margin-bottom: 0.3rem !important;
 }
 
+/* Beskrivelse af projektet med baggrund */
 .projectDescription {
   color: #2d313b;
   font-family: "Courier New", Courier, monospace;
@@ -121,12 +136,14 @@
   flex: 1;
 }
 
+/* buttonContainer - CSS styling */
 .buttonContainer {
   display: flex;
   gap: 1rem;
   margin-top: auto;
 }
 
+/* projectLinks - CSS styling */
 .projectLinks {
   display: flex;
   gap: 1rem;
@@ -135,6 +152,7 @@
   margin-top: 1rem;
 }
 
+/* demoButton - CSS styling */
 .demoButton {
   background: none;
   border: none;
@@ -153,16 +171,19 @@
   box-shadow: none;
 }
 
+/* demoButton:hover - CSS styling */
 .demoButton:hover {
   color: #4a7ba7;
   transform: none;
   box-shadow: none;
 }
 
+/* demoButton:active - CSS styling */
 .demoButton:active {
   color: #4a7ba7;
 }
 
+/* detailButton - CSS styling */
 .detailButton {
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   border: 1px solid black;
@@ -183,18 +204,22 @@
   text-stroke: 0.5px black;
 }
 
+/* detailButton:hover - CSS styling */
 .detailButton:hover {
   background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
+/* detailButton:active - CSS styling */
 .detailButton:active {
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .container {
     max-width: 1000px;
@@ -206,6 +231,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (992px)
+   ======================================== */
 @media (max-width: 992px) {
   .container {
     max-width: 800px;
@@ -217,6 +245,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (768px)
+   ======================================== */
 @media (max-width: 768px) {
   .projectGrid {
     grid-template-columns: 1fr;

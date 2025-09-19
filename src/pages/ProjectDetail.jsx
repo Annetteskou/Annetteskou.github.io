@@ -1,3 +1,9 @@
+// ========================================
+// PROJEKT DETALJE SIDE KOMPONENT - ProjectDetail.jsx
+// ========================================
+// Dette er projekt detalje siden hvor brugeren kan se specifikke
+// projekter med beskrivelser, teknologier, screenshots og links
+
 // Importerer React hooks til state management og side effekter
 import { useEffect, useState } from "react";
 // Importerer React Router til at få URL parametre og navigation

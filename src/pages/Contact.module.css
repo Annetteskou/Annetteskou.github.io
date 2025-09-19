@@ -1,3 +1,8 @@
+/* ========================================
+   KONTAKT SIDE STYLING - Contact.module.css
+   ======================================== */
+
+/* Hovedcontainer for kontakt siden */
 .contactPage {
   min-height: calc(100vh - 120px);
   display: flex;
@@ -8,6 +13,7 @@
   position: relative;
 }
 
+/* Grid container med to kolonner for indhold */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -17,12 +23,14 @@
   z-index: 1;
 }
 
+/* headerRow - CSS styling */
 .headerRow {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* title - CSS styling */
 .title {
   font-family: "Courier New", Courier, monospace;
   font-size: 2.5rem;
@@ -34,6 +42,7 @@
   position: relative;
 }
 
+/* title::after - CSS styling */
 .title::after {
   content: "";
   position: absolute;
@@ -46,6 +55,7 @@
   border-radius: 2px;
 }
 
+/* Grid layout med to kolonner */
 .grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -56,13 +66,16 @@
   justify-content: center;
 }
 
+/* panelTitle - CSS styling */
 .panelTitle {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: #ffffff;
 }
 
+/* infoPanel, - CSS styling */
 .infoPanel,
+/* Panel med kontakt formular */
 .formPanel {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.35);
@@ -74,8 +87,7 @@
   backdrop-filter: blur(1px);
 }
 
-/* formPanel intentionally inherits panel sizing and spacing */
-
+/* infoItem - CSS styling */
 .infoItem {
   display: flex;
   align-items: center;
@@ -83,21 +95,24 @@
   margin: 1.75rem 0;
 }
 
-/* Extra spacing between Navn, Email og Nummer blokke */
+/* infoItem + .infoItem - CSS styling */
 .infoItem + .infoItem {
   margin-top: 2.5rem;
 }
 
+/* infoIcon - CSS styling */
 .infoIcon {
   font-size: 1.8rem;
 }
 
+/* infoImgIcon - CSS styling */
 .infoImgIcon {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
+/* infoLabel - CSS styling */
 .infoLabel {
   font-weight: 700;
   font-size: 1.6rem;
@@ -106,6 +121,7 @@
     1px 1px 0 #000;
 }
 
+/* infoValue - CSS styling */
 .infoValue {
   font-size: 1.4rem;
   color: #ffffff;
@@ -113,6 +129,7 @@
   letter-spacing: 1px;
 }
 
+/* socialRow - CSS styling */
 .socialRow {
   display: flex;
   gap: 1.25rem;
@@ -123,10 +140,12 @@
   bottom: 44px;
 }
 
+/* socialLink - CSS styling */
 .socialLink {
   display: inline-block;
 }
 
+/* socialLink img - CSS styling */
 .socialLink img {
   width: 64px;
   height: 64px;
@@ -137,23 +156,27 @@
   display: block;
 }
 
-/* Make GitHub icon visually match size */
+/* socialLink img[alt="GitHub"] - CSS styling */
 .socialLink img[alt="GitHub"] {
   width: 72px;
   height: 72px;
 }
 
+/* form - CSS styling */
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* inputWrapper - CSS styling */
 .inputWrapper {
   display: block;
 }
 
+/* input, - CSS styling */
 .input,
+/* textarea - CSS styling */
 .textarea {
   width: 100%;
   padding: 0.9rem 1rem;
@@ -166,21 +189,26 @@
   font-size: 1.2rem;
 }
 
+/* input::placeholder, - CSS styling */
 .input::placeholder,
+/* textarea::placeholder - CSS styling */
 .textarea::placeholder {
   color: rgba(255, 254, 254, 0.767);
 }
 
+/* textarea - CSS styling */
 .textarea {
   resize: vertical;
 }
 
+/* actions - CSS styling */
 .actions {
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
 }
 
+/* submitBtn - CSS styling */
 .submitBtn {
   background: linear-gradient(135deg, #5b73a5 0%, #eaeaea 100%);
   color: #fff;
@@ -198,12 +226,14 @@
   transition: all 0.15s ease;
 }
 
+/* submitBtn:hover - CSS styling */
 .submitBtn:hover {
   background: linear-gradient(135deg, #4a7ba7 0%, #6b9bd2 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* decor - CSS styling */
 .decor {
   position: absolute;
   right: 20px;
@@ -212,6 +242,7 @@
   pointer-events: none;
 }
 
+/* Side karakter med telefon billede */
 .sideCharacter {
   position: absolute;
   right: -50px;
@@ -223,10 +254,12 @@
   cursor: pointer;
 }
 
+/* sideCharacter:hover - CSS styling */
 .sideCharacter:hover {
   transform: rotate(25deg) scale(1.1);
 }
 
+/* socialLink - CSS styling */
 .socialLink {
   display: inline-block;
   transition: none;
@@ -236,25 +269,32 @@
   background: transparent;
 }
 
+/* socialLink img - CSS styling */
 .socialLink img {
   transition: filter 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* socialLink:hover img, - CSS styling */
 .socialLink:hover img,
+/* socialLink:focus-visible img, - CSS styling */
 .socialLink:focus-visible img,
+/* socialLink:active img - CSS styling */
 .socialLink:active img {
   filter: brightness(1.06) saturate(1.05)
     drop-shadow(0 0 10px rgba(129, 172, 225, 0.7))
     drop-shadow(0 0 18px rgba(129, 172, 225, 0.4));
 }
 
+/* socialIcon - CSS styling */
 .socialIcon {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-/* Responsive Design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .container {
     max-width: 1000px;
@@ -266,6 +306,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (992px)
+   ======================================== */
 @media (max-width: 992px) {
   .container {
     max-width: 800px;
@@ -281,6 +324,9 @@
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (768px)
+   ======================================== */
 @media (max-width: 768px) {
   .title {
     font-size: 2.6rem;

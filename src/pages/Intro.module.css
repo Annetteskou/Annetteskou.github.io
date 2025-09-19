@@ -1,3 +1,8 @@
+/* ========================================
+   INTRO ANIMATION STYLING - Intro.module.css
+   ======================================== */
+
+/* intro - CSS styling */
 .intro {
   position: fixed;
   inset: 0;
@@ -10,18 +15,20 @@
   animation: fadeOut 1s ease 2.5s forwards;
 }
 
+/* center - CSS styling */
 .center {
   text-align: center;
   animation: zoomIn 0.8s ease;
 }
 
+/* title - CSS styling */
 .title {
   font-size: 3rem;
   font-family: "Courier New", Courier, monospace;
   background: linear-gradient(90deg, #ff73b3, #6366f1);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: white; /* hvid fyld */
-  -webkit-text-stroke: 1px black; /* sort kant */
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 1px black;
 }
 
 @keyframes zoomIn {
@@ -42,19 +49,27 @@
   }
 }
 
-/* Responsive design */
+/* ========================================
+   RESPONSIVE DESIGN - TABLET LANDSCAPE (1200px)
+   ======================================== */
 @media (max-width: 1200px) {
   .title {
     font-size: 2.5rem;
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - TABLET PORTRAIT (992px)
+   ======================================== */
 @media (max-width: 992px) {
   .title {
     font-size: 2.2rem;
   }
 }
 
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE LANDSCAPE (768px)
+   ======================================== */
 @media (max-width: 768px) {
   .title {
     font-size: 2rem;

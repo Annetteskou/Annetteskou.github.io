@@ -3,7 +3,24 @@
 // ========================================
 // Dette er kontakt siden hvor brugeren kan se kontakt information
 // og udfylde et kontakt formular
+//
+// EMAILJS OPSÆTNING - FØLG DISSE TRIN:
+// 1. Gå til https://www.emailjs.com/ og opret en gratis konto
+// 2. Opret en Email Service (Gmail, Outlook, etc.)
+// 3. Opret en Email Template med disse variabler:
+//    - {{from_name}} - afsenderens navn
+//    - {{from_email}} - afsenderens email
+//    - {{phone}} - telefonnummer
+//    - {{message}} - beskeden
+//    - {{to_email}} - din email (Annette-skou@hotmail.com)
+// 4. Kopier dine Service ID, Template ID og Public Key
+// 5. Erstat "YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID" og "YOUR_PUBLIC_KEY" i koden
+// 6. Nu vil du modtage alle beskedene direkte i din inbox!
 
+// Importerer React hooks til state management
+import { useState } from "react";
+// Importerer EmailJS til email funktionalitet
+import emailjs from "@emailjs/browser";
 // Importerer CSS styles for kontakt siden
 import styles from "./Contact.module.css";
 // Importerer floating lights komponenten til baggrundseffekt
@@ -11,6 +28,67 @@ import FloatingLights from "../component/FloatingLights";
 
 // Hovedkomponenten for kontakt siden
 export default function Contact() {
+  // State til at holde form data
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  // State til at holde styr på form status
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  // Funktion til at håndtere input ændringer
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // Funktion til at håndtere form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // EmailJS konfiguration - alle nøgler er sat op
+    const serviceID = "service_kk043lh"; // Din EmailJS service ID
+    const templateID = "template_ptllolw"; // Din EmailJS template ID
+    const publicKey = "pAwavl7ClJLoMnFBF"; // Din EmailJS public key
+
+    try {
+      // Send email via EmailJS
+      await emailjs.send(
+        serviceID,
+        templateID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        publicKey
+      );
+
+      setSubmitStatus("success");
+      setFormData({ name: "", phone: "", email: "", message: "" }); // Reset form
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      console.error("Error details:", {
+        serviceID,
+        templateID,
+        publicKey,
+        formData,
+      });
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <main className={styles.contactPage}>
       {/* Floating lights baggrundseffekt */}
@@ -119,13 +197,17 @@ export default function Contact() {
             <h2 className={styles.panelTitle}>Kontakt mig</h2>
 
             {/* Kontakt formular */}
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               {/* Navn input felt */}
               <label className={styles.inputWrapper}>
                 <input
                   className={styles.input}
                   type="text"
+                  name="name"
                   placeholder="Navn"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
                 />
               </label>
 
@@ -134,7 +216,10 @@ export default function Contact() {
                 <input
                   className={styles.input}
                   type="tel"
+                  name="phone"
                   placeholder="Nummer"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                 />
               </label>
 
@@ -143,7 +228,11 @@ export default function Contact() {
                 <input
                   className={styles.input}
                   type="email"
+                  name="email"
                   placeholder="Email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
                 />
               </label>
 
@@ -151,15 +240,49 @@ export default function Contact() {
               <label className={styles.inputWrapper}>
                 <textarea
                   className={styles.textarea}
+                  name="message"
                   placeholder="Besked"
                   rows={5}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
                 />
               </label>
 
+              {/* Status besked */}
+              {submitStatus === "success" && (
+                <div
+                  style={{
+                    color: "#4CAF50",
+                    marginBottom: "1rem",
+                    textAlign: "center",
+                  }}
+                >
+                  Tak for din besked! Jeg vender tilbage til dig snart.
+                </div>
+              )}
+              {submitStatus === "error" && (
+                <div
+                  style={{
+                    color: "#f44336",
+                    marginBottom: "1rem",
+                    textAlign: "center",
+                  }}
+                >
+                  Der opstod en fejl. Tjek browser console for detaljer.
+                  <br />
+                  <small>Prøv at genindlæse siden og prøv igen.</small>
+                </div>
+              )}
+
               {/* Submit knap container */}
               <div className={styles.actions}>
-                <button className={styles.submitBtn} type="submit">
-                  Send
+                <button
+                  className={styles.submitBtn}
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sender..." : "Send"}
                 </button>
               </div>
             </form>

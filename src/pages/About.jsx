@@ -38,8 +38,8 @@ export default function About() {
   const handleDownloadCV = () => {
     // Opret et link element til at trigge download
     const link = document.createElement("a");
-    link.href = "/CV- Annette Skou.pdf"; // Sti til CV filen
-    link.download = "CV- Annette Skou.pdf"; // Navn på den downloadede fil
+    link.href = "/CV Multi.pdf"; // Sti til CV filen
+    link.download = "CV Multi.pdf"; // Navn på den downloadede fil
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

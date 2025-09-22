@@ -96,8 +96,8 @@ export default function About() {
             <p>
               &gt; Når jeg ikke studerer, bruger jeg min fritid på
               reformertræning. Jeg elsker at male og dekorere min lejlighed med
-              mine egne værker, og derudover gamer jeg, hvor jeg finder
-              inspiration i digitale universer.
+              værkerne, og derudover gamer jeg, hvor jeg finder inspiration i
+              digitale universer.
             </p>
           </section>
         </div>

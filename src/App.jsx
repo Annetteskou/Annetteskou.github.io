@@ -18,6 +18,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
 import Intro from "./pages/Intro";
+import ResponsiveWarning from "./component/ResponsiveWarning";
 // Importerer AOS (Animate On Scroll) bibliotek til animationer
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -80,6 +81,9 @@ function App() {
 
   return (
     <>
+      {/* Responsive warning popup - vises altid når skærmen er for lille */}
+      <ResponsiveWarning />
+
       {/* Conditional rendering: Vis intro hvis showIntro er true */}
       {showIntro && <Intro onFinish={handleIntroFinish} />}
 

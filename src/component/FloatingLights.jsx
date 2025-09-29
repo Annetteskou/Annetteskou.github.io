@@ -22,12 +22,12 @@ export default function FloatingLights() {
           "--x": "10%", // Position: 10% fra venstre
           "--y": "20%", // Position: 20% fra toppen
           // Mørk blå farvepalette med forskellige transparens niveauer
-          "--color": "rgba(30, 58, 138, 0.15)",
-          "--color2": "rgba(30, 58, 138, 0.08)",
-          "--color3": "rgba(30, 58, 138, 0.2)",
+          "--color": "rgba(30, 58, 138, 0.1)",
+          "--color2": "rgba(30, 58, 138, 0.1)",
+          "--color3": "rgba(30, 58, 138, 0.12)",
           "--color4": "rgba(30, 58, 138, 0.12)",
-          "--color5": "rgba(30, 58, 138, 0.3)",
-          "--color6": "rgba(30, 58, 138, 0.15)",
+          "--color5": "rgba(30, 58, 138, 0.35)",
+          "--color6": "rgba(30, 58, 138, 0.1)",
         }}
       ></div>
 
@@ -42,12 +42,12 @@ export default function FloatingLights() {
           "--x": "80%", // Position: 80% fra venstre
           "--y": "15%", // Position: 15% fra toppen
           // Medium blå farvepalette
-          "--color": "rgba(37, 99, 235, 0.15)",
-          "--color2": "rgba(37, 99, 235, 0.08)",
-          "--color3": "rgba(37, 99, 235, 0.2)",
-          "--color4": "rgba(37, 99, 235, 0.12)",
-          "--color5": "rgba(37, 99, 235, 0.3)",
-          "--color6": "rgba(37, 99, 235, 0.15)",
+          "--color": "rgba(37, 99, 235, 0.1)",
+          "--color2": "rgba(37, 99, 235, 0.1)",
+          "--color3": "rgba(37, 99, 235, 0.12)",
+          "--color4": "rgba(37, 99, 235, 0.35)",
+          "--color5": "rgba(37, 99, 235, 0.35)",
+          "--color6": "rgba(37, 99, 235, 0.1)",
         }}
       ></div>
 
@@ -62,12 +62,12 @@ export default function FloatingLights() {
           "--x": "20%", // Position: 20% fra venstre
           "--y": "70%", // Position: 70% fra toppen
           // Lysere medium blå farvepalette
-          "--color": "rgba(37, 99, 235, 0.08)",
-          "--color2": "rgba(37, 99, 235, 0.03)",
-          "--color3": "rgba(37, 99, 235, 0.12)",
-          "--color4": "rgba(37, 99, 235, 0.06)",
-          "--color5": "rgba(37, 99, 235, 0.2)",
-          "--color6": "rgba(37, 99, 235, 0.08)",
+          "--color": "rgba(37, 99, 235, 0.1)",
+          "--color2": "rgba(37, 99, 235, 0.1)",
+          "--color3": "rgba(37, 99, 235, 0.35)",
+          "--color4": "rgba(37, 99, 235, 0.12)",
+          "--color5": "rgba(37, 99, 235, 0.12)",
+          "--color6": "rgba(37, 99, 235, 0.1)",
         }}
       ></div>
 
@@ -82,12 +82,12 @@ export default function FloatingLights() {
           "--x": "70%", // Position: 70% fra venstre
           "--y": "60%", // Position: 60% fra toppen
           // Lysere mørk blå farvepalette
-          "--color": "rgba(30, 58, 138, 0.08)",
-          "--color2": "rgba(30, 58, 138, 0.03)",
+          "--color": "rgba(30, 58, 138, 0.1)",
+          "--color2": "rgba(30, 58, 138, 0.1)",
           "--color3": "rgba(30, 58, 138, 0.12)",
-          "--color4": "rgba(30, 58, 138, 0.06)",
-          "--color5": "rgba(30, 58, 138, 0.2)",
-          "--color6": "rgba(30, 58, 138, 0.08)",
+          "--color4": "rgba(30, 58, 138, 0.12)",
+          "--color5": "rgba(30, 58, 138, 0.12)",
+          "--color6": "rgba(30, 58, 138, 0.1)",
         }}
       ></div>
 
@@ -102,12 +102,12 @@ export default function FloatingLights() {
           "--x": "50%", // Position: 50% fra venstre (centreret)
           "--y": "40%", // Position: 40% fra toppen
           // Lysere mørk blå farvepalette
-          "--color": "rgba(30, 58, 138, 0.08)",
-          "--color2": "rgba(30, 58, 138, 0.03)",
+          "--color": "rgba(30, 58, 138, 0.1)",
+          "--color2": "rgba(30, 58, 138, 0.1)",
           "--color3": "rgba(30, 58, 138, 0.12)",
-          "--color4": "rgba(30, 58, 138, 0.06)",
-          "--color5": "rgba(30, 58, 138, 0.2)",
-          "--color6": "rgba(30, 58, 138, 0.08)",
+          "--color4": "rgba(30, 58, 138, 0.12)",
+          "--color5": "rgba(30, 58, 138, 0.12)",
+          "--color6": "rgba(30, 58, 138, 0.1)",
         }}
       ></div>
 
@@ -122,12 +122,12 @@ export default function FloatingLights() {
           "--x": "90%", // Position: 90% fra venstre
           "--y": "80%", // Position: 80% fra toppen
           // Lysere medium blå farvepalette
-          "--color": "rgba(37, 99, 235, 0.08)",
-          "--color2": "rgba(37, 99, 235, 0.03)",
-          "--color3": "rgba(37, 99, 235, 0.12)",
-          "--color4": "rgba(37, 99, 235, 0.06)",
-          "--color5": "rgba(37, 99, 235, 0.2)",
-          "--color6": "rgba(37, 99, 235, 0.08)",
+          "--color": "rgba(37, 99, 235, 0.1)",
+          "--color2": "rgba(37, 99, 235, 0.1)",
+          "--color3": "rgba(37, 99, 235, 0.35)",
+          "--color4": "rgba(37, 99, 235, 0.12)",
+          "--color5": "rgba(37, 99, 235, 0.12)",
+          "--color6": "rgba(37, 99, 235, 0.1)",
         }}
       ></div>
 
@@ -142,12 +142,12 @@ export default function FloatingLights() {
           "--x": "5%", // Position: 5% fra venstre
           "--y": "50%", // Position: 50% fra toppen (centreret)
           // Medium blå farvepalette
-          "--color": "rgba(37, 99, 235, 0.15)",
-          "--color2": "rgba(37, 99, 235, 0.08)",
-          "--color3": "rgba(37, 99, 235, 0.2)",
-          "--color4": "rgba(37, 99, 235, 0.12)",
-          "--color5": "rgba(37, 99, 235, 0.3)",
-          "--color6": "rgba(37, 99, 235, 0.15)",
+          "--color": "rgba(37, 99, 235, 0.1)",
+          "--color2": "rgba(37, 99, 235, 0.1)",
+          "--color3": "rgba(37, 99, 235, 0.12)",
+          "--color4": "rgba(37, 99, 235, 0.35)",
+          "--color5": "rgba(37, 99, 235, 0.35)",
+          "--color6": "rgba(37, 99, 235, 0.1)",
         }}
       ></div>
 
@@ -162,12 +162,12 @@ export default function FloatingLights() {
           "--x": "60%", // Position: 60% fra venstre
           "--y": "10%", // Position: 10% fra toppen
           // Lysere medium blå farvepalette
-          "--color": "rgba(37, 99, 235, 0.08)",
-          "--color2": "rgba(37, 99, 235, 0.03)",
-          "--color3": "rgba(37, 99, 235, 0.12)",
-          "--color4": "rgba(37, 99, 235, 0.06)",
-          "--color5": "rgba(37, 99, 235, 0.2)",
-          "--color6": "rgba(37, 99, 235, 0.08)",
+          "--color": "rgba(37, 99, 235, 0.1)",
+          "--color2": "rgba(37, 99, 235, 0.1)",
+          "--color3": "rgba(37, 99, 235, 0.35)",
+          "--color4": "rgba(37, 99, 235, 0.12)",
+          "--color5": "rgba(37, 99, 235, 0.12)",
+          "--color6": "rgba(37, 99, 235, 0.1)",
         }}
       ></div>
     </div>

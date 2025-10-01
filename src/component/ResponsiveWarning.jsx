@@ -101,7 +101,7 @@ function ResponsiveWarning() {
             udvikling for mobile og tablet er i øjeblikket under udvikling.
           </p>
           <p className={styles.subMessage}>
-            For den bedste oplevelse, anbefaler vi at besøge siden på en skærm
+            For den bedste oplevelse, anbefaler jeg at besøge siden på en skærm
             større end 1024px bred.
           </p>
         </div>
